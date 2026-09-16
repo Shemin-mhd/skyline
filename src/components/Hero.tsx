@@ -40,29 +40,26 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
           {/* Left Content (6 cols) */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-2.5">
-              <span className="text-[11px] font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block">
-                ACOUSTIC &amp; SPECIALTY CONTRACTORS
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em]">
-                Acoustic &amp; Specialty Solutions
-                <span className="block text-gray-500 font-sans font-normal text-base sm:text-lg lg:text-xl mt-2 tracking-normal">
-                  From 100 m² — Turnkey in 2 Months
+              <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em] uppercase">
+                Designed for Silence.<br />
+                Engineered for Sound.
+                <span className="block text-gray-500 font-sans font-normal text-base sm:text-lg lg:text-xl mt-3 tracking-normal normal-case">
+                  Premium Acoustic &amp; Sound Solutions for Modern Spaces
                 </span>
               </h1>
             </div>
 
             <p className="text-gray-600 font-sans text-xs sm:text-sm md:text-base leading-relaxed max-w-lg">
-              Smart Engineering. Better Spaces. Exceptional Experiences. We build thoughtfully designed acoustic environments for comfortable living.
+              Skylink Acoustics delivers professional acoustic solutions designed to improve sound quality, reduce unwanted noise, control reverberation and create comfortable, high-performance spaces.
             </p>
 
+            {/* CTAs */}
             <div className="flex flex-wrap gap-3.5 items-center pt-1">
               <a
-                href="https://wa.me/97470076272"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#services"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#111] hover:bg-black text-white font-sans font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg rounded-full transition-all"
               >
-                <span>WhatsApp Enquiry</span>
+                <span>Explore Solutions</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -70,17 +67,44 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
                 onClick={onOpenQuoteModal}
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-xs rounded-full transition-all cursor-pointer"
               >
-                <span>Request Quote</span>
+                <span>Discuss Your Project</span>
               </button>
             </div>
 
+            {/* Focus Areas Pills */}
+            <div className="pt-2">
+              <span className="text-[10px] font-sans font-bold tracking-[0.16em] text-gray-400 uppercase block mb-2">
+                FOCUS AREAS:
+              </span>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {[
+                  "Acoustic Treatment",
+                  "Acoustic Insulation",
+                  "Home Theater Solutions",
+                  "Luxury Starry Sky Lighting",
+                  "Professional Installation",
+                  "Sound Isolation",
+                  "Impact Noise Control",
+                  "Gym Floor Systems",
+                  "Customized Design",
+                ].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-white border border-gray-200/90 text-[11px] font-sans font-medium text-gray-700 rounded-full shadow-2xs"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             {/* Stats - Clean inline without box */}
-            <div className="pt-2 max-w-lg">
+            <div className="pt-1 max-w-lg">
               <div className="grid grid-cols-3 gap-4 sm:gap-6 divide-x divide-gray-300/80">
                 {stats.map((stat, idx) => (
                   <div key={idx} className={`space-y-1 ${idx > 0 ? "pl-4 sm:pl-6" : ""}`}>
                     <div className="flex items-baseline">
-                      <span className="font-sans text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#111] tracking-tight leading-none">
+                      <span className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#111] tracking-tight leading-none">
                         {stat.num}
                       </span>
                       <span className="font-sans text-lg sm:text-xl font-medium text-[#C49B5B] ml-0.5 select-none">

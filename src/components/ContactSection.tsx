@@ -20,10 +20,10 @@ export default function ContactSection() {
   };
 
   const contactItems = [
-    { icon: Phone, text: "+974 7007 62 72" },
-    { icon: Mail, text: "office@skylinkee.com" },
-    { icon: Globe, text: "skylinkec.com" },
-    { icon: MapPin, text: "Bahrain / KSA / GCC" },
+    { icon: Phone, text: "+973 33048555", href: "tel:+97333048555" },
+    { icon: Mail, text: "office@skylinkec.com", href: "mailto:office@skylinkec.com" },
+    { icon: Globe, text: "skylinkec.com", href: "https://skylinkec.com" },
+    { icon: MapPin, text: "KANOO TOWER — MANAMA", href: "#" },
   ];
 
   return (
@@ -34,26 +34,29 @@ export default function ContactSection() {
           {/* Left Contact Details */}
           <div className="space-y-8">
             <div className="space-y-3">
-              <span className="text-[11px] font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block">
-                GET IN TOUCH
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#111] leading-[1.1] tracking-tight">
-                Let&apos;s Build Better <br />
-                Spaces Together.
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] leading-[1.1] tracking-[-0.03em] uppercase">
+                Let&apos;s Build a Quieter, <br />
+                Better Space.
               </h2>
               <p className="text-gray-600 font-sans text-xs sm:text-sm md:text-base leading-relaxed max-w-md">
-                From private luxury cinemas to commercial fit-outs and comprehensive acoustic isolation, Skylink delivers turnkey solutions designed around your exact specifications.
+                From private residences to hotels, apartments, commercial developments and large-scale fit-out projects, Skylink Acoustics delivers premium acoustic and interior solutions designed around your project.
               </p>
             </div>
 
             <div className="space-y-3.5 pt-2">
               {contactItems.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-4">
-                  <div className="w-11 h-11 bg-white border border-gray-200/80 rounded-full flex items-center justify-center text-[#111] shadow-xs">
+                <a
+                  key={idx}
+                  href={item.href}
+                  className="flex items-center gap-4 group transition-colors"
+                >
+                  <div className="w-11 h-11 bg-white border border-gray-200/80 rounded-full flex items-center justify-center text-[#111] shadow-xs group-hover:bg-black group-hover:text-white transition-colors">
                     <item.icon className="w-5 h-5" />
                   </div>
-                  <span className="font-sans font-semibold text-sm text-[#111]">{item.text}</span>
-                </div>
+                  <span className="font-sans font-semibold text-sm text-[#111] group-hover:text-gray-600 transition-colors">
+                    {item.text}
+                  </span>
+                </a>
               ))}
             </div>
           </div>
@@ -142,7 +145,7 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full py-4 bg-[#111] hover:bg-black text-white font-sans font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all rounded-full cursor-pointer"
                 >
-                  <span>Request A Consultation</span>
+                  <span>Discuss Your Project with Skylink Acoustics</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </form>

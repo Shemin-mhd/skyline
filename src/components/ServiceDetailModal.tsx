@@ -13,6 +13,8 @@ export interface ServiceDetail {
   specs: string;
   desc: string;
   longDesc: string;
+  statement?: string;
+  targetClients?: string;
   applications: string[];
   features: { title: string; desc: string }[];
   process: { step: string; title: string; desc: string }[];
@@ -51,7 +53,7 @@ export default function ServiceDetailModal({
   if (!isOpen || !service) return null;
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Skylink Engineering, I am interested in learning more about your ${service.title} (${service.tag}) solutions.`
+    `Hello Skylink Acoustics, I would like to discuss: ${service.title} (${service.tag}).`
   );
 
   return (
@@ -131,7 +133,16 @@ export default function ServiceDetailModal({
                 {service.longDesc}
               </p>
 
-              {/* Spatial Applications Tags from PDF */}
+              {/* Statement Quote */}
+              {service.statement && (
+                <div className="p-3.5 bg-[#FAF9F6] border-l-2 border-black rounded-r-xl">
+                  <p className="font-sans text-xs sm:text-sm font-semibold text-[#111] italic">
+                    {service.statement}
+                  </p>
+                </div>
+              )}
+
+              {/* Spatial Applications Tags */}
               <div className="pt-2">
                 <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-2">
                   IDEAL FOR APPLICATION IN:
@@ -147,6 +158,18 @@ export default function ServiceDetailModal({
                   ))}
                 </div>
               </div>
+
+              {/* Target Clients */}
+              {service.targetClients && (
+                <div className="pt-1">
+                  <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-1">
+                    TARGET CLIENTS:
+                  </span>
+                  <span className="text-xs font-sans text-gray-600 font-medium">
+                    {service.targetClients}
+                  </span>
+                </div>
+              )}
             </div>
 
           </div>
@@ -164,43 +187,44 @@ export default function ServiceDetailModal({
               {service.features.map((feat, idx) => (
                 <div
                   key={idx}
-                  className="p-4 sm:p-5 bg-[#FAF9F6] border border-gray-200 flex items-start gap-3.5 hover:border-black transition-colors"
+                  className="p-4 bg-[#FAF9F6] border border-gray-200/80 rounded-xl space-y-1.5 hover:border-black transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif text-base sm:text-lg font-normal text-black tracking-tight">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
+                    <h4 className="font-sans text-xs sm:text-sm font-bold text-black tracking-tight">
                       {feat.title}
                     </h4>
-                    <p className="font-sans text-xs text-gray-600 mt-1 leading-relaxed">
-                      {feat.desc}
-                    </p>
                   </div>
+                  <p className="font-sans text-xs text-gray-600 leading-relaxed pl-6">
+                    {feat.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Section 3: 4-Step Solution Delivery (PDF Page 10) */}
+          {/* Section 3: Engineering Process & Methodology */}
           <div className="space-y-4 pt-6 border-t border-gray-200">
             <div className="flex items-center gap-3">
               <span className="text-xs font-sans font-bold tracking-[0.24em] text-gray-500 uppercase">
-                HOW WE WORK — OUR SOLUTION APPROACH
+                TURNKEY IMPLEMENTATION PROCESS
               </span>
               <div className="w-12 h-[1px] bg-gray-300" />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
-              {service.process.map((step, idx) => (
-                <div key={idx} className="p-4 bg-white border border-gray-200 relative group hover:border-black transition-all">
-                  <span className="font-serif text-2xl font-light text-gray-400 block mb-1">
-                    {step.step}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {service.process.map((step) => (
+                <div
+                  key={step.step}
+                  className="p-4 bg-white border border-gray-200 rounded-xl space-y-2 shadow-2xs"
+                >
+                  <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase">
+                    PHASE {step.step}
                   </span>
-                  <h5 className="font-serif text-sm font-normal text-black tracking-tight mb-1">
+                  <h5 className="font-sans text-xs sm:text-sm font-bold text-black tracking-tight">
                     {step.title}
                   </h5>
-                  <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
+                  <p className="font-sans text-xs text-gray-600 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -233,7 +257,7 @@ export default function ServiceDetailModal({
             </button>
 
             <a
-              href={`https://wa.me/97470076272?text=${whatsappMessage}`}
+              href={`https://wa.me/97333048555?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"

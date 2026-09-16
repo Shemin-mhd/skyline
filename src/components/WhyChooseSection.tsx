@@ -22,39 +22,39 @@ interface WhyPoint {
 const whyPoints: WhyPoint[] = [
   {
     icon: Award,
-    badge: "Grade A",
-    title: "Professional Engineering",
-    desc: "Physics-based acoustic simulation & structural precision for flawless isolation.",
-  },
-  {
-    icon: Sliders,
-    badge: "Bespoke",
-    title: "100% Custom Solutions",
-    desc: "Tailored to your space dimensions, interior decor, and performance criteria.",
+    badge: "01",
+    title: "Professional Acoustic Solutions",
+    desc: "Solutions designed around the specific acoustic and spatial requirements of each space.",
   },
   {
     icon: ShieldCheck,
-    badge: "Guaranteed",
-    title: "Certified Materials",
-    desc: "Lab-tested high-density membranes, mineral wools, and decoupled channels.",
+    badge: "02",
+    title: "Quality Materials",
+    desc: "Professionally selected acoustic and insulation materials suited to the application.",
   },
   {
-    icon: Wrench,
-    badge: "Precision",
-    title: "Skilled Installation",
-    desc: "Trained specialist craftsmen ensuring airtight seals and zero sound leakage.",
-  },
-  {
-    icon: Clock,
-    badge: "Reliable",
-    title: "Turnkey Timelines",
-    desc: "Streamlined project management from initial drawings to final acoustic testing.",
+    icon: Sliders,
+    badge: "03",
+    title: "Customized Design",
+    desc: "Every project has different acoustic requirements — solutions are tailored, not templated.",
   },
   {
     icon: Layers,
-    badge: "Zero Flutter",
-    title: "Acoustic Decoupling",
-    desc: "Specialized floor, wall, and ceiling decoupling preventing structural vibration.",
+    badge: "04",
+    title: "Residential to Large-Scale",
+    desc: "From a single home theater to major hotel, apartment and commercial developments.",
+  },
+  {
+    icon: Sparkles,
+    badge: "05",
+    title: "Integrated Design",
+    desc: "Acoustic systems that complement the architecture and interior — never compromise it.",
+  },
+  {
+    icon: Wrench,
+    badge: "06",
+    title: "Professional Installation",
+    desc: "Careful installation is essential to achieving the intended acoustic performance.",
   },
 ];
 
@@ -69,18 +69,13 @@ export default function WhyChooseSection() {
       <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
 
         {/* Centered Heading */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 px-6 mb-12 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white border border-gray-200 text-xs font-bold uppercase tracking-wider text-black shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-black" />
-            <span>The Skylink Advantage</span>
-          </div>
-
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-black tracking-tight">
-            Why Choose Us
+        <div className="text-center max-w-3xl mx-auto space-y-3 px-6 mb-12 sm:mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-[-0.03em] uppercase">
+            Why Choose Skylink Acoustics?
           </h2>
 
-          <p className="text-gray-600 font-sans text-xs sm:text-sm md:text-base leading-relaxed">
-            Engineered excellence, premium craftsmanship, and guaranteed acoustic performance.
+          <p className="text-gray-700 font-sans text-sm sm:text-base md:text-lg font-medium italic leading-relaxed">
+            “We don't just treat rooms. We engineer experiences.”
           </p>
         </div>
 

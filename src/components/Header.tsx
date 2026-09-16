@@ -34,11 +34,11 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
               <span className="w-1 h-4 bg-white group-hover:bg-gray-300 transition-colors" />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white uppercase leading-none group-hover:text-gray-300 transition-colors">
+              <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-white uppercase leading-none group-hover:text-gray-300 transition-colors">
                 SKYLINK
               </span>
-              <span className="text-[7px] sm:text-[7.5px] font-sans font-semibold tracking-[0.24em] text-white/70 uppercase mt-1">
-                ENGINEERING &amp; CONSTRUCTION
+              <span className="text-[8px] sm:text-[9px] font-sans font-bold tracking-[0.24em] text-white/80 uppercase mt-1">
+                ACOUSTICS
               </span>
             </div>
           </Link>

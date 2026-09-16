@@ -90,11 +90,11 @@ export default function AcousticInsulationSection({ onOpenQuoteModal }: Props) {
 
         {/* Top Category Breadcrumb Tag */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase">
+          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase rounded-full">
             02
           </span>
           <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-            ACOUSTIC INSULATION
+            HOTELS &amp; APARTMENTS
           </span>
           <div className="w-12 h-[1px] bg-gray-300" />
         </div>
@@ -103,48 +103,73 @@ export default function AcousticInsulationSection({ onOpenQuoteModal }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
           <div className="lg:col-span-6 space-y-6">
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[56px] font-normal text-[#111] leading-[1.08] tracking-tight">
-              Quiet Spaces.<br />
-              Better Living.
-            </h1>
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em] uppercase">
+                Privacy is the<br />
+                New Luxury.
+              </h1>
+              <p className="text-sm sm:text-base font-sans font-semibold text-black mt-2">
+                Acoustic Insulation for Hotels &amp; Apartments
+              </p>
+            </div>
 
-            <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-xl">
-              Effective acoustic insulation designed to reduce sound transmission between rooms and neighboring spaces.
+            <p className="text-gray-700 font-sans text-sm sm:text-base leading-relaxed max-w-xl">
+              In hospitality and residential environments, acoustic privacy is a critical part of comfort and quality. Our acoustic insulation solutions help reduce unwanted sound transmission between guest rooms, apartments, corridors, service areas, mechanical areas and common spaces.
             </p>
 
-            <p className="text-gray-500 font-sans text-xs sm:text-sm leading-relaxed max-w-lg">
-              Whether retrofitting luxury private suites or engineering hotel partitions from the ground up, Skylink delivers certified high-STC sound barrier assemblies that isolate airborne conversations, HVAC air rumble, and impact noise.
-            </p>
+            {/* Statement Quote */}
+            <div className="p-4 bg-white border-l-2 border-black rounded-r-xl shadow-2xs">
+              <p className="font-sans text-xs sm:text-sm font-semibold text-[#111] italic">
+                “Quieter spaces. Greater privacy. Better guest experiences.”
+              </p>
+            </div>
 
-            {/* Applications Pills */}
-            <div className="pt-2">
-              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-3">
-                APPLICATION SECTORS:
+            {/* Solutions Pills */}
+            <div className="pt-1">
+              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-2.5">
+                INSULATION SOLUTIONS:
               </span>
-              <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                {applications.map((app, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3.5 py-1.5 bg-white border border-gray-200 text-black text-xs font-sans font-semibold tracking-wider uppercase shadow-2xs"
-                  >
-                    {app}
-                  </span>
+              <div className="grid grid-cols-2 gap-2 text-xs font-sans font-semibold text-gray-800">
+                {[
+                  "Wall acoustic insulation",
+                  "Ceiling acoustic insulation",
+                  "Room-to-room sound isolation",
+                  "Impact noise control",
+                  "Mechanical noise control",
+                  "New construction applications",
+                  "Privacy enhancement",
+                  "Renovation & fit-out applications",
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-black shrink-0" />
+                    <span>{item}</span>
+                  </div>
                 ))}
               </div>
             </div>
 
+            {/* Target Clients */}
+            <div className="pt-1">
+              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-1">
+                TARGET CLIENTS:
+              </span>
+              <p className="text-xs font-sans text-gray-600 font-medium">
+                Hotels · Apartments · Residential Developers · Hospitality Projects
+              </p>
+            </div>
+
             {/* Direct Action Buttons - Curved Pill Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-3 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenQuoteModal}
                 className="px-7 py-3.5 bg-[#111] hover:bg-black text-white font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg rounded-full transition-all cursor-pointer flex items-center gap-2"
               >
-                <span>Request Acoustic Consultation</span>
+                <span>Discuss Your Project</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <a
-                href="https://wa.me/97470076272?text=Hello%20Skylink,%20I%20am%20interested%20in%20Acoustic%20Insulation%20solutions."
+                href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Acoustic%20Insulation%20solutions."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"

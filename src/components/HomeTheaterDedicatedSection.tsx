@@ -91,50 +91,79 @@ export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props)
           
           {/* Left Text */}
           <div className="lg:col-span-6 space-y-6">
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[56px] font-normal text-[#111] leading-[1.08] tracking-tight uppercase">
-              Your Home.<br />
-              Your Cinema.
-            </h1>
-
-            <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-xl">
-              Transform your home into a private cinematic experience with professionally designed acoustic solutions that improve sound clarity, reduce unwanted noise and create a comfortable entertainment environment.
-            </p>
-
-            <p className="text-gray-500 font-sans text-xs sm:text-sm leading-relaxed max-w-lg">
-              We design and construct turnkey private cinemas that deliver authentic studio-grade sound. Every surface is engineered for perfect frequency response, clear dialogue intelligibility, and zero sound escape.
-            </p>
-
-            {/* Applications */}
-            <div className="pt-2">
-              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-3">
-                APPLICATION ENVIRONMENTS:
+            <div>
+              <span className="text-xs font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block mb-2">
+                HOME THEATERS
               </span>
-              <div className="flex flex-wrap gap-2.5">
-                {applications.map((app, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3.5 py-1.5 bg-white border border-gray-200 text-black text-xs font-sans font-semibold tracking-wider uppercase shadow-2xs"
-                  >
-                    {app}
-                  </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em] uppercase">
+                Your Home.<br />
+                Your Cinema.<br />
+                <span className="text-gray-500">Perfect Sound.</span>
+              </h1>
+              <p className="text-sm sm:text-base font-sans font-semibold text-black mt-2">
+                Luxury Acoustic Solutions for Private Home Theaters
+              </p>
+            </div>
+
+            <p className="text-gray-700 font-sans text-sm sm:text-base leading-relaxed max-w-xl">
+              Transform your private entertainment room into an immersive cinematic experience. Our home theater acoustic solutions are designed to control unwanted reflections, improve sound clarity and create a balanced listening environment.
+            </p>
+
+            {/* Statement Quote */}
+            <div className="p-4 bg-white border-l-2 border-black rounded-r-xl shadow-2xs">
+              <p className="font-sans text-xs sm:text-sm font-semibold text-[#111] italic">
+                “Experience every dialogue, detail and soundtrack with greater clarity.”
+              </p>
+            </div>
+
+            {/* Solutions List */}
+            <div className="pt-1">
+              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-2.5">
+                ACOUSTIC SOLUTIONS:
+              </span>
+              <div className="grid grid-cols-2 gap-2 text-xs font-sans font-semibold text-gray-800">
+                {[
+                  "Acoustic wall treatment",
+                  "Acoustic ceiling treatment",
+                  "Sound isolation",
+                  "Reverberation control",
+                  "Speaker integration",
+                  "Bass management",
+                  "Customized acoustic design",
+                  "Professional installation",
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-black shrink-0" />
+                    <span>{item}</span>
+                  </div>
                 ))}
               </div>
             </div>
 
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            {/* Target Clients */}
+            <div className="pt-1">
+              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-1">
+                TARGET CLIENTS:
+              </span>
+              <p className="text-xs font-sans text-gray-600 font-medium">
+                Luxury Villa Owners · Homeowners · Private Cinema Projects · Interior Designers
+              </p>
+            </div>
+
+            <div className="pt-3 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenQuoteModal}
-                className="px-7 py-3.5 bg-[#111] hover:bg-black text-white font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center gap-2"
+                className="px-7 py-3.5 bg-[#111] hover:bg-black text-white font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center gap-2 rounded-full"
               >
-                <span>Design Your Cinema</span>
+                <span>Discuss Your Project</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <a
-                href="https://wa.me/97470076272?text=Hello%20Skylink,%20I%20am%20interested%20in%20Home%20Theater%20design%20and%20acoustics."
+                href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Home%20Theater%20acoustic%20solutions."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2"
+                className="px-6 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 rounded-full"
               >
                 <span>WhatsApp Consultation</span>
               </a>

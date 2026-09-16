@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowLeft, CheckCircle2, Sliders } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Sliders, Layers, Building2, Home, Film, Sparkles } from "lucide-react";
 
 interface Props {
   onOpenQuoteModal: () => void;
@@ -11,24 +11,49 @@ interface Props {
 export default function FitOutSection({ onOpenQuoteModal }: Props) {
   const [sliderPos, setSliderPos] = useState(50);
 
-  const tags = ["CUSTOMIZED SOLUTIONS", "PROFESSIONAL INSTALLATION", "PROJECT SUPPORT"];
-
-  const pillars = [
+  const projectScales = [
     {
       num: "01",
-      title: "Architectural Millwork & Slats",
-      desc: "Precision CNC timber acoustic slats and micro-perforated veneer panels that control reverberation with warm aesthetics.",
+      title: "Single Room",
+      desc: "Private acoustic listening rooms, bedrooms, podcast studios, and high-performance quiet spaces.",
+      icon: Home,
     },
     {
       num: "02",
-      title: "Coffered Acoustic Ceilings",
-      desc: "Custom suspended ceiling baffles with hidden high-density sound absorption cores and flush LED channel integrations.",
+      title: "Home Theater",
+      desc: "Bespoke private cinemas engineered with decoupled isolation, bass traps, and fabric finishes.",
+      icon: Film,
     },
     {
       num: "03",
-      title: "Master Craftsmanship",
-      desc: "Turnkey fit-out contractors executing flawless transitions between architectural stone, glass, and acoustic woodwork.",
+      title: "Office / Restaurant",
+      desc: "Architectural sound absorption systems to control reverberation and ensure acoustic comfort.",
+      icon: Layers,
     },
+    {
+      num: "04",
+      title: "Hotel / Large-Scale Development",
+      desc: "Comprehensive multi-unit acoustic insulation, room-to-room privacy, and large-scale fit-out execution.",
+      icon: Building2,
+    },
+  ];
+
+  const applications = [
+    "Residential fit-outs & villa interiors",
+    "Home theaters",
+    "Offices & restaurants",
+    "Hotels & retail spaces",
+    "Commercial interiors",
+    "Large-scale projects",
+  ];
+
+  const capabilities = [
+    "Acoustic wall systems",
+    "Acoustic ceiling systems",
+    "Sound isolation & noise control",
+    "Reverberation control",
+    "Customized acoustic solutions",
+    "Professional installation",
   ];
 
   return (
@@ -56,7 +81,7 @@ export default function FitOutSection({ onOpenQuoteModal }: Props) {
             <span>/</span>
             <Link href="/#services" className="hover:text-black transition-colors">Services</Link>
             <span>/</span>
-            <span className="text-black font-semibold">Fit-Out Solutions</span>
+            <span className="text-black font-semibold">Fit-Out Projects</span>
           </div>
         </div>
 
@@ -66,7 +91,7 @@ export default function FitOutSection({ onOpenQuoteModal }: Props) {
             04
           </span>
           <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-            FIT-OUT &amp; PROJECT SOLUTIONS
+            FIT-OUT PROJECTS
           </span>
           <div className="w-12 h-[1px] bg-gray-300" />
         </div>
@@ -74,12 +99,14 @@ export default function FitOutSection({ onOpenQuoteModal }: Props) {
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end justify-between">
           <div className="lg:col-span-8 space-y-4">
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-[52px] font-normal text-[#111] leading-[1.08] tracking-tight">
-              From Empty Space<br />
-              To Perfectly Finished Space.
+            <span className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-[#C49B5B]">
+              Customized Acoustic Solutions for Fit-Out Projects
+            </span>
+            <h1 className="font-heading text-3xl sm:text-4xl lg:text-[52px] font-bold text-[#111] leading-[1.08] tracking-tight">
+              FROM ONE ROOM TO AN ENTIRE PROJECT.
             </h1>
-            <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
-              Customized acoustic solutions for homeowners, contractors, developers, consultants and project teams—from concept through professional installation.
+            <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-3xl">
+              Whether it is a single residential room or a major commercial development, Skylink Acoustics provides project-specific acoustic solutions designed around the space, application and performance requirements.
             </p>
           </div>
 
@@ -88,22 +115,33 @@ export default function FitOutSection({ onOpenQuoteModal }: Props) {
               onClick={onOpenQuoteModal}
               className="px-8 py-3.5 bg-[#111] hover:bg-black text-white font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg rounded-full transition-all cursor-pointer flex items-center gap-2"
             >
-              <span>Consult On Fit-Out</span>
+              <span>Discuss Your Fit-Out</span>
               <ArrowRight className="w-4 h-4" />
             </button>
+            <a
+              href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Fit-Out%20Acoustic%20Solutions."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-sans font-bold text-gray-600 hover:text-black tracking-wider uppercase underline underline-offset-4"
+            >
+              WhatsApp +973 33048555 →
+            </a>
           </div>
         </div>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2.5 pt-2">
-          {tags.map((tag, idx) => (
-            <span
-              key={idx}
-              className="px-4 py-1.5 bg-[#FAF9F6] border border-gray-200 text-black text-xs font-sans font-semibold tracking-wider uppercase rounded-full"
-            >
-              {tag}
+        {/* Statement Quote Banner */}
+        <div className="p-6 sm:p-8 bg-[#FAF9F6] border-l-4 border-black border-y border-r border-gray-200/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span className="text-[11px] font-sans font-bold tracking-[0.2em] uppercase text-gray-500 block mb-1">
+              Project Statement
             </span>
-          ))}
+            <p className="font-heading text-xl sm:text-2xl font-semibold text-[#111] tracking-tight">
+              “One specialist. Multiple project scales.”
+            </p>
+          </div>
+          <span className="px-4 py-1.5 bg-black text-white text-xs font-sans font-bold tracking-widest uppercase rounded-full">
+            Turnkey Delivery
+          </span>
         </div>
 
         {/* Interactive Before & After Slider */}
@@ -156,15 +194,77 @@ export default function FitOutSection({ onOpenQuoteModal }: Props) {
           </div>
         </div>
 
-        {/* 3 Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-          {pillars.map((p) => (
-            <div key={p.num} className="p-6 sm:p-7 bg-[#FAF9F6] border border-gray-200/80 space-y-3">
-              <span className="font-serif text-3xl font-light text-gray-400 block">{p.num}</span>
-              <h3 className="font-serif text-lg sm:text-xl font-normal text-black tracking-tight">{p.title}</h3>
-              <p className="font-sans text-xs sm:text-sm text-gray-600 leading-relaxed">{p.desc}</p>
+        {/* Project Scale: 01 to 04 */}
+        <div className="space-y-6 pt-4">
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-sans font-bold uppercase tracking-[0.24em] text-gray-500">
+              PROJECT SCALE
+            </span>
+            <div className="flex-1 h-[1px] bg-gray-200" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projectScales.map((p) => {
+              const Icon = p.icon;
+              return (
+                <div key={p.num} className="p-6 bg-[#FAF9F6] border border-gray-200/80 space-y-3 hover:border-black transition-colors">
+                  <div className="flex items-center justify-between">
+                    <span className="font-heading text-2xl font-bold text-gray-400">{p.num}</span>
+                    <Icon className="w-5 h-5 text-gray-500" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-black tracking-tight">{p.title}</h3>
+                  <p className="font-sans text-xs sm:text-sm text-gray-600 leading-relaxed">{p.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Applications & Capabilities Side by Side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+          
+          {/* Applications */}
+          <div className="p-8 bg-white border border-gray-200 space-y-6">
+            <div className="space-y-1">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.2em] text-[#C49B5B]">
+                Versatile Deployments
+              </span>
+              <h3 className="font-heading text-2xl font-bold text-black tracking-tight">
+                Applications
+              </h3>
             </div>
-          ))}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {applications.map((app, idx) => (
+                <div key={idx} className="flex items-center gap-2.5 text-sm font-sans text-gray-800">
+                  <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
+                  <span>{app}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Capabilities */}
+          <div className="p-8 bg-[#FAF9F6] border border-gray-200 space-y-6">
+            <div className="space-y-1">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-[0.2em] text-[#C49B5B]">
+                Engineering Disciplines
+              </span>
+              <h3 className="font-heading text-2xl font-bold text-black tracking-tight">
+                Capabilities
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {capabilities.map((cap, idx) => (
+                <div key={idx} className="flex items-center gap-2.5 text-sm font-sans text-gray-800">
+                  <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
+                  <span>{cap}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
 
       </section>

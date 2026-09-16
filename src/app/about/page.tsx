@@ -88,10 +88,10 @@ export default function AboutPage() {
             {/* Category Breadcrumb Tag */}
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="px-3.5 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase rounded-full">
-                01
+                02
               </span>
               <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-                ABOUT SKYLINK ENGINEERING &amp; CONSTRUCTION
+                ABOUT SKYLINK ACOUSTICS
               </span>
               <div className="w-12 h-[1px] bg-gray-300" />
             </div>
@@ -101,19 +101,37 @@ export default function AboutPage() {
               
               {/* Left Column: Heading & Mission */}
               <div className="lg:col-span-6 space-y-6">
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-normal text-[#111] leading-[1.08] tracking-tight">
-                  Smart Engineering. <br />
-                  Better Spaces. <br />
-                  <span className="text-gray-500">Exceptional Experiences.</span>
+                <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em] uppercase">
+                  Engineering Better Sound Experiences
                 </h1>
 
-                <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-xl">
-                  Skylink is a premier specialty contractor in acoustic physics, private residential cinema engineering, architectural fit-outs, and structural vibration isolation across Bahrain and the GCC.
-                </p>
+                <div className="space-y-4 text-gray-700 font-sans text-sm sm:text-base leading-relaxed max-w-xl">
+                  <p className="font-medium text-[#111]">
+                    Skylink Acoustics delivers professional acoustic solutions designed to improve sound quality, reduce unwanted noise, control reverberation and create comfortable, high-performance spaces.
+                  </p>
 
-                <p className="text-gray-500 font-sans text-xs sm:text-sm leading-relaxed max-w-lg">
-                  We bridge the gap between complex acoustic engineering and luxury interior design. Whether engineering private luxury master suites with zero sound transmission or creating turnkey private cinemas, we transform spaces where sound and silence coexist in harmony.
-                </p>
+                  <p className="text-gray-600">
+                    We are a specialist acoustic and interior solutions provider serving residential, hospitality, commercial and large-scale projects. Our solutions can be integrated into both new construction and existing fit-out projects — from a single private room to a full-scale development.
+                  </p>
+
+                  <p className="text-gray-500 text-xs sm:text-sm">
+                    Every engagement begins with the space itself: its use, its geometry, its materials and the experience it needs to deliver. From that understanding, we design and install acoustic and interior systems that perform quietly in the background and beautifully in the room.
+                  </p>
+                </div>
+
+                {/* Focus Areas */}
+                <div className="pt-2">
+                  <span className="text-[10px] font-sans font-bold tracking-[0.16em] text-gray-400 uppercase block mb-2">
+                    CORE FOCUS:
+                  </span>
+                  <div className="flex flex-wrap gap-2 text-xs font-semibold text-gray-800">
+                    {["Acoustic Treatment", "Acoustic Insulation", "Home Theater", "Starry Sky Lighting", "Professional Installation"].map((item, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-white border border-gray-200 rounded-full shadow-2xs">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
                 {/* Curved Pill Action Buttons */}
                 <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -126,7 +144,7 @@ export default function AboutPage() {
                   </button>
 
                   <a
-                    href="https://wa.me/97470076272?text=Hello%20Skylink,%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+                    href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20would%20like%20to%20discuss%20an%20acoustic%20project."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-7 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs sm:text-sm font-semibold tracking-wide uppercase transition-all rounded-full flex items-center gap-2 shadow-xs active:scale-95"
@@ -392,7 +410,7 @@ export default function AboutPage() {
                 </button>
 
                 <a
-                  href="https://wa.me/97470076272?text=Hello%20Skylink,%20I%20would%20like%20to%20consult%20on%20an%20acoustic%20project."
+                  href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20would%20like%20to%20consult%20on%20an%20acoustic%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-7 py-3.5 bg-transparent hover:bg-white/10 border border-white/30 text-white font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"

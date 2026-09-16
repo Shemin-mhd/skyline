@@ -40,7 +40,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             <CheckCircle2 className="w-12 h-12 text-[#9E814D] mx-auto" />
             <h3 className="font-serif text-2xl sm:text-3xl font-normal tracking-tight text-[#111]">Quote Request Received</h3>
             <p className="text-xs text-gray-600 font-sans max-w-xs mx-auto">
-              Thank you. A senior engineer from Skylink Engineering & Construction will contact you shortly.
+              Thank you. A senior acoustic specialist from Skylink Acoustics will contact you shortly.
             </p>
             <button
               onClick={() => {

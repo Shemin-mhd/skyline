@@ -67,11 +67,11 @@ export default function NewBuildSection({ onOpenQuoteModal }: Props) {
 
         {/* Top Breadcrumb */}
         <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase">
+          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase rounded-full">
             03
           </span>
           <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-            NEW BUILD PROJECTS
+            NEW BUILDINGS
           </span>
           <div className="w-12 h-[1px] bg-gray-300" />
         </div>
@@ -81,35 +81,53 @@ export default function NewBuildSection({ onOpenQuoteModal }: Props) {
           
           {/* Left Text */}
           <div className="lg:col-span-6 space-y-6">
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[56px] font-normal text-[#111] leading-[1.08] tracking-tight">
-              Plan Acoustics<br />
-              From The Start.
-            </h1>
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em] uppercase">
+                Build Quieter.<br />
+                Live Better.
+              </h1>
+              <p className="text-sm sm:text-base font-sans font-semibold text-black mt-2">
+                Acoustic Planning for New Residential, Hotel &amp; Commercial Buildings
+              </p>
+            </div>
 
-            <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-xl">
-              Skylink integrates acoustic treatments and insulation during planning and construction—for superior sound control and occupant comfort.
+            <p className="text-gray-700 font-sans text-sm sm:text-base leading-relaxed max-w-xl">
+              Acoustic performance should be considered during the design and construction stage — not after the problem appears. Skylink Acoustics provides acoustic solutions that can be incorporated into new building projects from the planning stage.
             </p>
 
-            <p className="text-gray-500 font-sans text-xs sm:text-sm leading-relaxed max-w-lg">
-              Retrofitting acoustics after finishes are installed can cost up to 4x more. By collaborating with architects and general contractors during the schematic design phase, we ensure acoustic perfection embedded into the structural framework.
-            </p>
+            {/* Statement Quote */}
+            <div className="p-4 bg-white border-l-2 border-black rounded-r-xl shadow-2xs">
+              <p className="font-sans text-xs sm:text-sm font-semibold text-[#111] italic">
+                “Plan acoustics early. Build performance into the project.”
+              </p>
+            </div>
+
+            {/* Target Clients */}
+            <div className="pt-1">
+              <span className="text-[10px] font-sans font-bold tracking-widest text-gray-400 uppercase block mb-1">
+                TARGET CLIENTS:
+              </span>
+              <p className="text-xs font-sans text-gray-600 font-medium">
+                Developers · Architects · Consultants · Contractors · Project Managers
+              </p>
+            </div>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenQuoteModal}
                 className="px-8 py-3.5 bg-[#111] hover:bg-black text-white font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg rounded-full transition-all cursor-pointer flex items-center gap-2"
               >
-                <span>Plan Your New Build</span>
+                <span>Discuss Your Project</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <a
-                href="https://wa.me/97470076272?text=Hello%20Skylink,%20I%20am%20interested%20in%20New%20Build%20Acoustics%20planning."
+                href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Acoustic%20Planning%20for%20a%20New%20Building."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"
               >
-                <span>WhatsApp Inquiry</span>
+                <span>WhatsApp Consultation</span>
               </a>
             </div>
           </div>

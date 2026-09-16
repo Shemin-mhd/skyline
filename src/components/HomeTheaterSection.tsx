@@ -23,7 +23,7 @@ export default function HomeTheaterSection({ onOpenQuoteModal }: HomeTheaterSect
 
             {/* Paragraph Description - Neutral Charcoal */}
             <p className="font-sans text-sm sm:text-[15px] text-gray-700 leading-relaxed max-w-md">
-              Skylink Engineering &amp; Construction delivers end-to-end solutions in home theaters, acoustic treatments, fit-out works and starry sky lighting. We combine engineering expertise with creative design to build spaces that inspire.
+              Skylink Acoustics delivers professional acoustic solutions designed to improve sound quality, reduce unwanted noise, control reverberation and create comfortable, high-performance spaces.
             </p>
 
             {/* Learn More Button */}
