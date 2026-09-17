@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import WhyChooseSection from "@/components/WhyChooseSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function WhySkylinkPage() {
@@ -14,6 +15,7 @@ export default function WhySkylinkPage() {
       <main>
         <WhyChooseSection />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

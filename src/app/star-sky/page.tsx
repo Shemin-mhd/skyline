@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import StarSkySection from "@/components/StarSkySection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function StarSkyPage() {
@@ -14,6 +15,7 @@ export default function StarSkyPage() {
       <main>
         <StarSkySection onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import GymFloorSection from "@/components/GymFloorSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 export default function GymFloorPage() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -13,6 +14,7 @@ export default function GymFloorPage() {
       <main>
         <GymFloorSection onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

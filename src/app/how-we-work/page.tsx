@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function HowWeWorkPage() {
@@ -14,6 +15,7 @@ export default function HowWeWorkPage() {
       <main>
         <HowWeWorkSection />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

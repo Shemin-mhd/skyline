@@ -1,0 +1,19 @@
+{
+  "activeWhatsApp": "+973 3304 8555",
+  "whatsAppNumbers": [
+    {
+      "id": "wa-primary",
+      "name": "Skylink Client Direct",
+      "phone": "+973 3304 8555",
+      "isActive": true,
+      "createdAt": "2026-09-17T12:00:00.000Z"
+    },
+    {
+      "id": "wa-1789635695313",
+      "name": "Secondary Line",
+      "phone": "+974 7007 6272",
+      "isActive": false,
+      "createdAt": "2026-09-17T09:01:35.316Z"
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function ContactPage() {
@@ -14,6 +15,7 @@ export default function ContactPage() {
       <main>
         <ContactSection />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

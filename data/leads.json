@@ -1,5 +1,103 @@
 [
   {
+    "id": "lead-1789639349332",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 3:32:29 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T10:02:29.332Z"
+  },
+  {
+    "id": "lead-1789636157059",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 2:39:17 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T09:09:17.059Z"
+  },
+  {
+    "id": "lead-1789635880970",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 2:34:40 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T09:04:40.970Z"
+  },
+  {
+    "id": "lead-1789634918013",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 2:18:37 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T08:48:38.013Z"
+  },
+  {
+    "id": "lead-1789634902509",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 2:18:22 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T08:48:22.509Z"
+  },
+  {
+    "id": "lead-1789628505498",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 12:31:45 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T07:01:45.498Z"
+  },
+  {
+    "id": "lead-1789628483734",
+    "type": "whatsapp",
+    "name": "WhatsApp Inquirer",
+    "phone": "+973 (WhatsApp Click)",
+    "service": "General Acoustic Inquiry",
+    "message": "Inquiry initiated from Floating WhatsApp Help",
+    "source": "Floating WhatsApp Help",
+    "status": "new",
+    "notes": [
+      "Instant click logged at 12:31:23 pm from Floating WhatsApp Help"
+    ],
+    "createdAt": "2026-09-17T07:01:23.734Z"
+  },
+  {
     "id": "lead-wa-1",
     "type": "whatsapp",
     "name": "Sheikh Khalid Al-Dosari",

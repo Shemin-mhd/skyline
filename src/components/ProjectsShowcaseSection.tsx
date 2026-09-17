@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const projects = [
   { title: "Luxury Villa", subtitle: "Home Theater & Acoustics", image: "/images/projects-villa.jpg" },
@@ -18,37 +17,13 @@ export default function ProjectsShowcaseSection() {
       <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-10">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <span className="text-[11px] font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block">
-              FEATURED PORTFOLIO
-            </span>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#111] tracking-tight leading-[1.1]">
-                Spaces That Speak <br />
-                For Themselves.
-              </h2>
-            <p className="text-gray-600 font-sans text-xs sm:text-sm md:text-base leading-relaxed">
-              A selection of our turnkey work across private villas, luxury hotels, commercial towers, and cinemas.
-            </p>
-          </div>
-
-          {/* Navigation Arrows - Round Buttons */}
-          <div className="flex items-center gap-2.5">
-            <button
-              onClick={() => setCurrentIdx((prev) => (prev === 0 ? projects.length - 1 : prev - 1))}
-              aria-label="Previous Project"
-              className="w-11 h-11 border border-gray-300 bg-white text-[#111] flex items-center justify-center hover:bg-gray-100 active:scale-95 transition-all shadow-xs rounded-full cursor-pointer"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => setCurrentIdx((prev) => (prev === projects.length - 1 ? 0 : prev + 1))}
-              aria-label="Next Project"
-              className="w-11 h-11 bg-[#111] hover:bg-black text-white flex items-center justify-center active:scale-95 transition-all shadow-md rounded-full cursor-pointer"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
+        <div className="space-y-3 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] tracking-[-0.03em] uppercase">
+            Projects
+          </h2>
+          <p className="text-gray-600 font-sans text-xs sm:text-sm md:text-base leading-relaxed">
+            A selection of our turnkey work across private villas, luxury hotels, commercial towers, and cinemas.
+          </p>
         </div>
 
         {/* Project Cards Row */}

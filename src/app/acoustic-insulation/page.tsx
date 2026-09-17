@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import AcousticInsulationSection from "@/components/AcousticInsulationSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function AcousticInsulationPage() {
@@ -17,6 +18,8 @@ export default function AcousticInsulationPage() {
       <main>
         <AcousticInsulationSection onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       </main>
+
+      <Footer />
 
       {/* Quote Modal */}
       <QuoteModal

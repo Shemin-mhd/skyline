@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function HowWeWorkSection() {
   const steps = [
@@ -84,7 +85,7 @@ export default function HowWeWorkSection() {
       <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
 
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto space-y-2 mb-8 sm:mb-10">
+        <div className="text-center max-w-xl mx-auto space-y-2 mb-10 sm:mb-12">
           <span className="text-[11px] font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block">
             OUR PROCESS
           </span>
@@ -96,27 +97,58 @@ export default function HowWeWorkSection() {
           </p>
         </div>
 
-        {/* Circular Flowchart Layout */}
+        {/* Flowchart Layout */}
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 items-start">
             {steps.map((step, idx) => (
               <div key={step.num} className="relative flex flex-col items-center text-center group">
 
-                {/* Horizontal Arrow Line between circles (desktop) */}
+                {/* Horizontal Arrow Line with Flow Animation between circles (desktop) */}
                 {idx < steps.length - 1 && (
-                  <div className="hidden md:flex items-center absolute top-9 left-[62%] w-[76%] z-0 pointer-events-none">
-                    <div className="w-full h-[1px] bg-gray-300 relative">
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-gray-400 rotate-45" />
+                  <div className="hidden md:flex items-center absolute top-8 sm:top-9 left-[60%] w-[80%] z-0 pointer-events-none">
+                    <div className="w-full h-[1.5px] bg-gray-300 relative overflow-visible">
+                      {/* Flowing Energy Light Beam */}
+                      <motion.div
+                        animate={{
+                          x: ["-100%", "250%"],
+                        }}
+                        transition={{
+                          duration: 2.2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: idx * 1.1,
+                        }}
+                        className="absolute top-0 left-0 w-2/5 h-full bg-gradient-to-r from-transparent via-black to-transparent"
+                      />
+
+                      {/* Traveling Flow Pulse Dot */}
+                      <motion.div
+                        animate={{
+                          left: ["0%", "100%"],
+                          opacity: [0, 1, 1, 0],
+                        }}
+                        transition={{
+                          duration: 2.2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: idx * 1.1,
+                        }}
+                        className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black shadow-xs"
+                      />
+
+                      {/* Arrowhead */}
+                      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-[1.5px] border-r-[1.5px] border-gray-400 rotate-45" />
                     </div>
                   </div>
                 )}
 
-                {/* Scaled-down Circular Node */}
+                {/* Clean Circular Node (No animation on the icon) */}
                 <div
-                  className={`relative z-10 w-16 h-16 sm:w-18 sm:h-18 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-md ${step.isFilled
+                  className={`relative z-10 w-16 h-16 sm:w-18 sm:h-18 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-md ${
+                    step.isFilled
                       ? "bg-black text-white shadow-sm"
                       : "bg-white border-2 border-black text-black shadow-2xs"
-                    }`}
+                  }`}
                 >
                   {step.icon}
                 </div>
@@ -135,6 +167,26 @@ export default function HowWeWorkSection() {
                     {step.desc}
                   </p>
                 </div>
+
+                {/* Mobile Vertical Flow Connector */}
+                {idx < steps.length - 1 && (
+                  <div className="md:hidden relative w-[1.5px] h-12 my-3 bg-gray-200 overflow-visible">
+                    <motion.div
+                      animate={{
+                        top: ["0%", "100%"],
+                        opacity: [0, 1, 1, 0],
+                      }}
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: idx * 1.1,
+                      }}
+                      className="absolute left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-black shadow-xs"
+                    />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 border-b-[1.5px] border-r-[1.5px] border-gray-400 rotate-45" />
+                  </div>
+                )}
 
               </div>
             ))}

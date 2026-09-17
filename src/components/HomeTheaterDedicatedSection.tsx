@@ -3,12 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, Clapperboard, Volume2, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
+import WhatsAppChatIcon from "@/components/WhatsAppChatIcon";
+import { useWhatsAppNumber } from "@/lib/use-whatsapp-number";
 
 interface Props {
   onOpenQuoteModal: () => void;
 }
 
 export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props) {
+  const { getWhatsAppUrl } = useWhatsAppNumber();
   const applications = [
     "PRIVATE VILLAS",
     "MEDIA ROOMS",
@@ -49,10 +52,10 @@ export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props)
   return (
     <div className="w-full bg-[#FAF9F6]">
       {/* Hero Split */}
-      <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-12 sm:pt-16 lg:pt-20 pb-16 space-y-12">
-        
+      <section className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-12 sm:pt-16 lg:pt-20 pb-16">
+
         {/* Top Navigation & Go Back Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <button
             onClick={() => {
               if (typeof window !== "undefined" && window.history.length > 1) {
@@ -76,25 +79,11 @@ export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props)
           </div>
         </div>
 
-        {/* Top Category Tag */}
-        <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase">
-            01
-          </span>
-          <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-            HOME THEATER
-          </span>
-          <div className="w-12 h-[1px] bg-gray-300" />
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
           {/* Left Text */}
           <div className="lg:col-span-6 space-y-6">
             <div>
-              <span className="text-xs font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block mb-2">
-                HOME THEATERS
-              </span>
               <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#111] leading-[1.08] tracking-[-0.03em] uppercase">
                 Your Home.<br />
                 Your Cinema.<br />
@@ -160,11 +149,12 @@ export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props)
               </button>
 
               <a
-                href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Home%20Theater%20acoustic%20solutions."
+                href={getWhatsAppUrl("Hello Skylink Acoustics, I am interested in Home Theater acoustic solutions.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 rounded-full"
               >
+                <WhatsAppChatIcon className="w-4 h-4 fill-[#00A859]" />
                 <span>WhatsApp Consultation</span>
               </a>
             </div>
@@ -178,13 +168,21 @@ export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props)
                 alt="Luxury Home Theater Cinema"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              
-              <div className="absolute bottom-5 left-6 right-6 text-white">
-                <span className="text-[10px] font-sans font-bold tracking-widest uppercase bg-black/70 backdrop-blur-md px-3 py-1 border border-white/20 inline-block mb-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+              {/* Dolby Atmos Badge Overlay */}
+              <div className="absolute top-4 right-4 z-10">
+                <span className="px-3.5 py-1.5 bg-black/80 backdrop-blur-md text-white border border-white/20 text-xs font-sans font-bold uppercase tracking-wider">
                   DOLBY ATMOS CALIBRATED
                 </span>
-                <p className="text-xs sm:text-sm font-sans font-medium text-white">
+              </div>
+
+              {/* Bottom Cinema Architecture Bar */}
+              <div className="absolute bottom-4 left-4 right-4 text-white z-10">
+                <span className="text-[10px] font-sans font-bold tracking-[0.2em] text-white/80 uppercase block mb-0.5">
+                  DOLBY ATMOS CALIBRATED
+                </span>
+                <p className="text-xs sm:text-sm font-sans font-medium text-white line-clamp-1">
                   Concealed Acoustic Fabric • Bass Absorption • Star Sky Ambience
                 </p>
               </div>
@@ -194,7 +192,7 @@ export default function HomeTheaterDedicatedSection({ onOpenQuoteModal }: Props)
         </div>
 
         {/* 4 Pillars */}
-        <div className="pt-8 border-t border-gray-200">
+        <div className="mt-16 pt-12 border-t border-gray-200">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {pillars.map((p, idx) => {
               const Icon = p.icon;

@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     "Smart Engineering. Better Spaces. Exceptional Experiences. Precision acoustic insulation, home theaters, gym flooring, fit-out solutions & starry sky lighting.",
 };
 
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+
 export default function RootLayout({
   children,
 }: {
@@ -34,6 +36,7 @@ export default function RootLayout({
     >
       <body className="bg-white text-[#111] font-sans antialiased m-0 p-0 selection:bg-black selection:text-white">
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

@@ -2,13 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowLeft, CheckCircle2, ShieldCheck, Cpu, HardHat, Award } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, ShieldCheck, Cpu, HardHat, Award, Layers, VolumeX } from "lucide-react";
+import WhatsAppChatIcon from "@/components/WhatsAppChatIcon";
+import { useWhatsAppNumber } from "@/lib/use-whatsapp-number";
 
 interface Props {
   onOpenQuoteModal: () => void;
 }
 
 export default function NewBuildSection({ onOpenQuoteModal }: Props) {
+  const { getWhatsAppUrl } = useWhatsAppNumber();
   const steps = [
     {
       num: "01",
@@ -65,16 +68,6 @@ export default function NewBuildSection({ onOpenQuoteModal }: Props) {
           </div>
         </div>
 
-        {/* Top Breadcrumb */}
-        <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase rounded-full">
-            03
-          </span>
-          <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-            NEW BUILDINGS
-          </span>
-          <div className="w-12 h-[1px] bg-gray-300" />
-        </div>
 
         {/* Hero Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -122,11 +115,12 @@ export default function NewBuildSection({ onOpenQuoteModal }: Props) {
               </button>
 
               <a
-                href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Acoustic%20Planning%20for%20a%20New%20Building."
+                href={getWhatsAppUrl("Hello Skylink Acoustics, I am interested in Acoustic Planning for a New Building.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"
               >
+                <WhatsAppChatIcon className="w-4 h-4 fill-[#00A859]" />
                 <span>WhatsApp Consultation</span>
               </a>
             </div>

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import NewBuildSection from "@/components/NewBuildSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function NewBuildPage() {
@@ -14,6 +15,7 @@ export default function NewBuildPage() {
       <main>
         <NewBuildSection onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

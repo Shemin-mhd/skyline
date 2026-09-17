@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import HomeTheaterDedicatedSection from "@/components/HomeTheaterDedicatedSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function HomeTheaterPage() {
@@ -14,6 +15,7 @@ export default function HomeTheaterPage() {
       <main>
         <HomeTheaterDedicatedSection onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );

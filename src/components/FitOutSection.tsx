@@ -3,12 +3,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, CheckCircle2, Sliders, Layers, Building2, Home, Film, Sparkles } from "lucide-react";
+import WhatsAppChatIcon from "@/components/WhatsAppChatIcon";
+import { useWhatsAppNumber } from "@/lib/use-whatsapp-number";
 
 interface Props {
   onOpenQuoteModal: () => void;
 }
 
 export default function FitOutSection({ onOpenQuoteModal }: Props) {
+  const { activeNumber, getWhatsAppUrl } = useWhatsAppNumber();
   const [sliderPos, setSliderPos] = useState(50);
 
   const projectScales = [
@@ -85,64 +88,20 @@ export default function FitOutSection({ onOpenQuoteModal }: Props) {
           </div>
         </div>
 
-        {/* Top Breadcrumb */}
-        <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-black text-white text-[11px] font-sans font-bold tracking-widest uppercase">
-            04
-          </span>
-          <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-500 uppercase">
-            FIT-OUT PROJECTS
-          </span>
-          <div className="w-12 h-[1px] bg-gray-300" />
-        </div>
 
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end justify-between">
-          <div className="lg:col-span-8 space-y-4">
-            <span className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-[#C49B5B]">
-              Customized Acoustic Solutions for Fit-Out Projects
-            </span>
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-[52px] font-bold text-[#111] leading-[1.08] tracking-tight">
-              FROM ONE ROOM TO AN ENTIRE PROJECT.
-            </h1>
-            <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-3xl">
-              Whether it is a single residential room or a major commercial development, Skylink Acoustics provides project-specific acoustic solutions designed around the space, application and performance requirements.
-            </p>
-          </div>
-
-          <div className="lg:col-span-4 flex flex-col items-start lg:items-end gap-3">
-            <button
-              onClick={onOpenQuoteModal}
-              className="px-8 py-3.5 bg-[#111] hover:bg-black text-white font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg rounded-full transition-all cursor-pointer flex items-center gap-2"
-            >
-              <span>Discuss Your Fit-Out</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <a
-              href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Fit-Out%20Acoustic%20Solutions."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-sans font-bold text-gray-600 hover:text-black tracking-wider uppercase underline underline-offset-4"
-            >
-              WhatsApp +973 33048555 →
-            </a>
-          </div>
-        </div>
-
-        {/* Statement Quote Banner */}
-        <div className="p-6 sm:p-8 bg-[#FAF9F6] border-l-4 border-black border-y border-r border-gray-200/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <span className="text-[11px] font-sans font-bold tracking-[0.2em] uppercase text-gray-500 block mb-1">
-              Project Statement
-            </span>
-            <p className="font-heading text-xl sm:text-2xl font-semibold text-[#111] tracking-tight">
-              “One specialist. Multiple project scales.”
-            </p>
-          </div>
-          <span className="px-4 py-1.5 bg-black text-white text-xs font-sans font-bold tracking-widest uppercase rounded-full">
-            Turnkey Delivery
+        <div className="space-y-4 max-w-4xl">
+          <span className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-[#C49B5B]">
+            Customized Acoustic Solutions for Fit-Out Projects
           </span>
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-[52px] font-bold text-[#111] leading-[1.08] tracking-tight">
+            FROM ONE ROOM TO AN ENTIRE PROJECT.
+          </h1>
+          <p className="text-gray-700 font-sans text-base sm:text-lg leading-relaxed max-w-3xl">
+            Whether it is a single residential room or a major commercial development, Skylink Acoustics provides project-specific acoustic solutions designed around the space, application and performance requirements.
+          </p>
         </div>
+
 
         {/* Interactive Before & After Slider */}
         <div className="relative w-full h-[360px] sm:h-[460px] lg:h-[540px] overflow-hidden border border-gray-200 shadow-xl select-none bg-black">

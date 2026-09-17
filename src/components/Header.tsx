@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, X, Menu } from "lucide-react";
+import { X, Menu } from "lucide-react";
 
 interface HeaderProps {
   onOpenQuoteModal: () => void;
@@ -16,9 +16,10 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -46,7 +47,10 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-7">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
               return (
                 <Link
                   key={link.href}
@@ -63,22 +67,13 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
             })}
           </nav>
 
-          {/* Right Action CTAs: Get a Quote pill + circular menu */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Right Action CTA: Get a Quote pill */}
+          <div className="hidden md:flex items-center">
             <button
               onClick={onOpenQuoteModal}
-              className="px-6 py-2.5 rounded-full bg-white hover:bg-gray-200 text-black font-sans text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-md cursor-pointer active:scale-95"
+              className="px-5 py-2.5 rounded-full bg-white hover:bg-gray-100 text-black font-sans text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-lg cursor-pointer active:scale-95 whitespace-nowrap"
             >
               <span>Get a Quote</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle navigation"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all cursor-pointer"
-            >
-              {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </button>
           </div>
 
@@ -110,10 +105,9 @@ export default function Header({ onOpenQuoteModal }: HeaderProps) {
               setMobileMenuOpen(false);
               onOpenQuoteModal();
             }}
-            className="w-full mt-4 px-5 py-3 rounded-full bg-white text-black font-sans font-semibold text-xs tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors cursor-pointer"
+            className="w-full mt-4 px-5 py-3 rounded-full bg-white text-black font-sans font-semibold text-xs tracking-wide uppercase flex items-center justify-center hover:bg-gray-100 transition-colors cursor-pointer"
           >
             <span>Get a Quote</span>
-            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       )}

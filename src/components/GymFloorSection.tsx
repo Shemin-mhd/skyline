@@ -3,12 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, ArrowLeft, ArrowRight, Activity, ShieldCheck, Dumbbell, Building2 } from "lucide-react";
+import WhatsAppChatIcon from "@/components/WhatsAppChatIcon";
+import { useWhatsAppNumber } from "@/lib/use-whatsapp-number";
 
 interface Props {
   onOpenQuoteModal: () => void;
 }
 
 export default function GymFloorSection({ onOpenQuoteModal }: Props) {
+  const { activeNumber, getWhatsAppUrl } = useWhatsAppNumber();
   const controls = [
     "Impact noise",
     "Weight-drop noise",
@@ -102,12 +105,13 @@ export default function GymFloorSection({ onOpenQuoteModal }: Props) {
               <ArrowUpRight className="w-4 h-4" />
             </button>
             <a
-              href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Gym%20Floor%20Acoustic%20Insulation."
+              href={getWhatsAppUrl("Hello Skylink Acoustics, I am interested in Gym Floor Acoustic Insulation.")}
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-3.5 bg-transparent hover:bg-white/10 border border-white/30 text-white font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"
             >
-              <span>WhatsApp +973 33048555</span>
+              <WhatsAppChatIcon className="w-4 h-4 fill-[#00A859]" />
+              <span>WhatsApp {activeNumber}</span>
             </a>
           </div>
 

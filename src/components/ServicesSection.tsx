@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import ServiceDetailModal, { ServiceDetail } from "@/components/ServiceDetailModal";
 
@@ -14,6 +15,7 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
   const [viewMode, setViewMode] = useState<"carousel" | "grid">(initialView);
+  const [isPaused, setIsPaused] = useState(false);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -263,146 +265,121 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
     },
   ];
 
+  // Triple array for seamless infinite floating marquee
+  const marqueeServices = [...services, ...services, ...services];
+
   return (
-    <section id="services" className="w-full bg-[#F5F5F7] min-h-[calc(100vh-76px)] flex items-center py-12 lg:py-16 border-b border-gray-200/80">
+    <section id="services" className="w-full bg-[#F5F5F7] min-h-[calc(100vh-76px)] flex items-center py-12 lg:py-16 border-b border-gray-200/80 overflow-hidden">
       <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
 
-        {/* Header Row: Title on Left, View Mode Switcher and Description on Right */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
-          <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] tracking-[-0.03em] uppercase">
-              Our Acoustic &amp; Interior Solutions
-            </h2>
-          </div>
-
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-            {/* View Mode Toggle Pill - Compact & Sleek */}
-            <div className="inline-flex items-center p-0.5 bg-white border border-gray-300 rounded-full shadow-2xs whitespace-nowrap self-start sm:self-auto">
-              <button
-                type="button"
-                onClick={() => setViewMode("carousel")}
-                className={`px-3 py-1 rounded-full text-[11px] font-sans font-semibold tracking-wider uppercase transition-all cursor-pointer whitespace-nowrap ${
-                  viewMode === "carousel"
-                    ? "bg-black text-white shadow-xs"
-                    : "text-gray-500 hover:text-black"
-                }`}
+        {/* Header Row: Title */}
+        <div className="mb-8 sm:mb-12">
+          {initialView === "grid" && (
+            <div className="mb-4">
+              <Link
+                href="/#services"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
               >
-                Carousel
-              </button>
-              <button
-                type="button"
-                onClick={() => setViewMode("grid")}
-                className={`px-3 py-1 rounded-full text-[11px] font-sans font-semibold tracking-wider uppercase transition-all cursor-pointer whitespace-nowrap ${
-                  viewMode === "grid"
-                    ? "bg-black text-white shadow-xs"
-                    : "text-gray-500 hover:text-black"
-                }`}
-              >
-                All (6)
-              </button>
+                <ArrowLeft className="w-4 h-4 text-blue-600 group-hover:text-blue-700 group-hover:-translate-x-1.5 transition-all duration-200" />
+                <span className="underline decoration-blue-400/60 underline-offset-4 group-hover:decoration-blue-700">Back to Home</span>
+              </Link>
             </div>
-
-            <p className="text-gray-500 font-sans text-xs font-medium max-w-xs leading-relaxed hidden lg:block">
-              One Team · Six Disciplines · One Standard of Craftsmanship.
-            </p>
-          </div>
+          )}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] tracking-[-0.03em] uppercase">
+            Our Acoustic &amp; Interior Solutions
+          </h2>
         </div>
 
-        {/* Dynamic Display: Carousel or Grid */}
+        {/* Dynamic Display: Floating Continuous Carousel or Grid */}
         {viewMode === "carousel" ? (
           <>
-            {/* Horizontal Scrollable Cards Track */}
+            {/* Continuous Animated Floating Track (Left to Right) */}
             <div
-              ref={scrollContainerRef}
-              className="flex gap-5 overflow-x-auto pb-6 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory"
+              className="relative w-full overflow-hidden py-3"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
             >
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  onClick={() => setSelectedService(service)}
-                  className="group relative flex-none w-[270px] sm:w-[310px] lg:w-[330px] h-[420px] sm:h-[460px] overflow-hidden bg-black snap-start shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-300/60"
-                >
-                  {/* Background Architectural Photo */}
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out brightness-105"
-                  />
+              <motion.div
+                className="flex gap-5 sm:gap-6 w-max cursor-grab active:cursor-grabbing px-3"
+                animate={{
+                  x: isPaused ? undefined : ["-33.333%", "0%"],
+                }}
+                transition={{
+                  x: {
+                    duration: 40,
+                    repeat: Infinity,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {marqueeServices.map((service, idx) => (
+                  <Link
+                    key={`${service.id}-${idx}`}
+                    href={service.href}
+                    className="group relative flex-none w-[275px] sm:w-[315px] lg:w-[335px] h-[430px] sm:h-[470px] overflow-hidden bg-black shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-300/70 rounded-2xl block"
+                  >
+                    {/* Background Architectural Photo */}
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out brightness-105"
+                    />
 
-                  {/* Ambient Contrast Scrim */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 via-50% to-black/20 group-hover:from-black transition-colors duration-500" />
+                    {/* Ambient Contrast Scrim */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 via-50% to-black/20 group-hover:from-black transition-colors duration-500" />
 
-                  {/* Top Step Number Badge from PDF */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 bg-black/70 backdrop-blur-md text-[11px] font-sans font-bold tracking-widest text-white border border-white/20 uppercase">
-                      {service.num}
-                    </span>
-                  </div>
-
-                  {/* Top Right Quick Click Action */}
-                  <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center shadow-lg">
-                      <ArrowUpRight className="w-4 h-4" />
-                    </span>
-                  </div>
-
-                  {/* Bottom Content Block */}
-                  <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-10 flex flex-col justify-end">
-                    <span className="text-[10px] sm:text-[11px] font-sans font-bold text-gray-300 tracking-[0.2em] uppercase block mb-1">
-                      {service.tag}
-                    </span>
-
-                    <h3 className="font-heading text-xl sm:text-2xl font-bold text-white leading-snug tracking-tight mb-2 group-hover:text-gray-200 transition-colors">
-                      {service.title}
-                    </h3>
-
-                    <p className="text-gray-300 font-sans text-xs leading-relaxed line-clamp-2 mb-3">
-                      {service.headline}
-                    </p>
-
-                    {/* Explore Pill Button */}
-                    <div className="pt-3 border-t border-white/20 flex items-center justify-between text-white text-xs font-semibold">
-                      <span className="tracking-wide uppercase text-[11px] group-hover:underline underline-offset-4">
-                        Explore Solution
+                    {/* Top Step Number Badge from PDF */}
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="px-3 py-1 bg-black/70 backdrop-blur-md text-[11px] font-sans font-bold tracking-widest text-white border border-white/20 uppercase rounded-full">
+                        {service.num}
                       </span>
-                      <div className="w-7 h-7 bg-white/20 group-hover:bg-white group-hover:text-black flex items-center justify-center rounded-full transition-all duration-300">
-                        <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+
+                    {/* Top Right Quick Click Action */}
+                    <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center shadow-lg">
+                        <ArrowUpRight className="w-4 h-4" />
+                      </span>
+                    </div>
+
+                    {/* Bottom Content Block */}
+                    <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-10 flex flex-col justify-end">
+                      <span className="text-[10px] sm:text-[11px] font-sans font-bold text-gray-300 tracking-[0.2em] uppercase block mb-1">
+                        {service.tag}
+                      </span>
+
+                      <h3 className="font-heading text-xl sm:text-2xl font-bold text-white leading-snug tracking-tight mb-2 group-hover:text-gray-200 transition-colors">
+                        {service.title}
+                      </h3>
+
+                      <p className="text-gray-300 font-sans text-xs leading-relaxed line-clamp-2 mb-3">
+                        {service.headline}
+                      </p>
+
+                      {/* Explore Pill Button */}
+                      <div className="pt-3 border-t border-white/20 flex items-center justify-between text-white text-xs font-semibold">
+                        <span className="tracking-wide uppercase text-[11px] group-hover:underline underline-offset-4">
+                          Explore Solution
+                        </span>
+                        <div className="w-7 h-7 bg-white/20 group-hover:bg-white group-hover:text-black flex items-center justify-center rounded-full transition-all duration-300">
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </Link>
+                ))}
+              </motion.div>
             </div>
 
-            {/* Bottom Control Bar */}
-            <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-200/80">
-              {/* Left Action - Curved Pill Button: Switches directly to Grid View to list all */}
-              <button
-                type="button"
-                onClick={() => setViewMode("grid")}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#111] hover:bg-black text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition-all shadow-md hover:shadow-lg active:scale-95 rounded-full cursor-pointer"
+            {/* Bottom Control Bar - Aligned right, vibrant blue link with arrow */}
+            <div className="flex items-center justify-end mt-6 pt-4 border-t border-gray-200/60">
+              <Link
+                href="/services"
+                className="group inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
               >
-                <span>View All Solutions ({services.length})</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-
-              {/* Right Round Arrow Controls */}
-              <div className="flex items-center gap-2.5">
-                <button
-                  onClick={() => scroll("left")}
-                  aria-label="Scroll left"
-                  className="w-11 h-11 bg-white hover:bg-gray-100 active:scale-95 border border-gray-300 shadow-xs flex items-center justify-center text-[#111] rounded-full transition-all cursor-pointer"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => scroll("right")}
-                  aria-label="Scroll right"
-                  className="w-11 h-11 bg-white hover:bg-gray-100 active:scale-95 border border-gray-300 shadow-xs flex items-center justify-center text-[#111] rounded-full transition-all cursor-pointer"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
+                <span className="underline decoration-blue-400/60 underline-offset-4 group-hover:decoration-blue-700">View More</span>
+                <ArrowRight className="w-4 h-4 text-blue-600 group-hover:text-blue-700 group-hover:translate-x-1.5 transition-all duration-200" />
+              </Link>
             </div>
           </>
         ) : (
@@ -415,9 +392,9 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
                   className="group bg-white border border-gray-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden rounded-2xl"
                 >
                   {/* Top Image Banner */}
-                  <div
-                    onClick={() => setSelectedService(service)}
-                    className="relative h-[230px] sm:h-[250px] overflow-hidden bg-black cursor-pointer"
+                  <Link
+                    href={service.href}
+                    className="relative h-[230px] sm:h-[250px] overflow-hidden bg-black cursor-pointer block"
                   >
                     <img
                       src={service.image}
@@ -446,17 +423,17 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
                         {service.tag}
                       </span>
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Card Content Body */}
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
-                      <h3
-                        onClick={() => setSelectedService(service)}
-                        className="font-heading text-xl font-bold text-black tracking-tight cursor-pointer hover:text-gray-700 transition-colors"
+                      <Link
+                        href={service.href}
+                        className="block font-heading text-xl font-bold text-black tracking-tight cursor-pointer hover:text-gray-700 transition-colors"
                       >
                         {service.title}
-                      </h3>
+                      </Link>
                       <p className="text-xs font-sans font-bold uppercase tracking-wider text-[#C49B5B]">
                         {service.headline}
                       </p>
@@ -488,7 +465,7 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
                         href={service.href}
                         className="inline-flex items-center gap-1 text-xs font-sans font-bold text-black hover:text-gray-600 uppercase tracking-wider transition-colors"
                       >
-                        <span>Full Page</span>
+                        <span>View Full Details</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -498,26 +475,14 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
             </div>
 
             {/* Bottom Bar in Grid Mode */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-gray-200/80">
-              <button
-                type="button"
-                onClick={() => setViewMode("carousel")}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-100 border border-gray-300 text-black text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-xs cursor-pointer"
+            <div className="flex items-center justify-start mt-6 pt-4 border-t border-gray-200/60">
+              <Link
+                href="/#services"
+                className="group inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
               >
-                <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Show Carousel View</span>
-              </button>
-
-              {onOpenQuoteModal && (
-                <button
-                  type="button"
-                  onClick={onOpenQuoteModal}
-                  className="inline-flex items-center gap-2 px-7 py-3 bg-black hover:bg-gray-900 text-white text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-md cursor-pointer"
-                >
-                  <span>Discuss Your Project</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              )}
+                <ArrowLeft className="w-4 h-4 text-blue-600 group-hover:text-blue-700 group-hover:-translate-x-1.5 transition-all duration-200" />
+                <span className="underline decoration-blue-400/60 underline-offset-4 group-hover:decoration-blue-700">Back to Home</span>
+              </Link>
             </div>
           </div>
         )}
@@ -529,7 +494,7 @@ export default function ServicesSection({ onOpenQuoteModal, initialView = "carou
         service={selectedService}
         isOpen={Boolean(selectedService)}
         onClose={() => setSelectedService(null)}
-        onOpenQuoteModal={onOpenQuoteModal || (() => {})}
+        onOpenQuoteModal={onOpenQuoteModal || (() => { })}
       />
     </section>
   );

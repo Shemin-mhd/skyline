@@ -3,12 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, Sparkles, Moon, Star, Layers, Palette, CheckCircle2 } from "lucide-react";
+import WhatsAppChatIcon from "@/components/WhatsAppChatIcon";
+import { useWhatsAppNumber } from "@/lib/use-whatsapp-number";
 
 interface Props {
   onOpenQuoteModal: () => void;
 }
 
 export default function StarSkySection({ onOpenQuoteModal }: Props) {
+  const { activeNumber, getWhatsAppUrl } = useWhatsAppNumber();
   const tags = ["FIBRE OPTIC LIGHTING", "CUSTOM STAR PATTERNS", "BESPOKE CEILING DESIGN", "ACOUSTIC INTEGRATION"];
 
   const features = [
@@ -72,16 +75,6 @@ export default function StarSkySection({ onOpenQuoteModal }: Props) {
           </div>
         </div>
 
-        {/* Top Breadcrumb */}
-        <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-white text-black text-[11px] font-sans font-bold tracking-widest uppercase">
-            06
-          </span>
-          <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.24em] text-gray-400 uppercase">
-            STARRY SKY LUXURY LIGHTING
-          </span>
-          <div className="w-12 h-[1px] bg-white/20" />
-        </div>
 
         {/* Hero Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -131,12 +124,13 @@ export default function StarSkySection({ onOpenQuoteModal }: Props) {
               </button>
 
               <a
-                href="https://wa.me/97333048555?text=Hello%20Skylink%20Acoustics,%20I%20am%20interested%20in%20Starry%20Sky%20Lighting%20solutions."
+                href={getWhatsAppUrl("Hello Skylink Acoustics, I am interested in Starry Sky Lighting solutions.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 bg-transparent hover:bg-white/10 border border-white/30 text-white font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"
               >
-                <span>WhatsApp +973 33048555</span>
+                <WhatsAppChatIcon className="w-4 h-4 fill-[#00A859]" />
+                <span>WhatsApp {activeNumber}</span>
               </a>
             </div>
           </div>

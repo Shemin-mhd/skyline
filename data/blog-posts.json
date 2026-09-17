@@ -1,0 +1,230 @@
+[
+  {
+    "id": "post-1",
+    "slug": "acoustic-insulation-luxury-villas-bahrain-stc-65",
+    "title": "Acoustic Insulation for Luxury Villas in Bahrain: Achieving STC 65+ Sound Isolation",
+    "excerpt": "A deep dive into structural sound decoupling, high-density mineral wool, and certified drywall partitions engineered to silence exterior city noise and internal mechanical hums.",
+    "category": "Acoustic Engineering",
+    "author": {
+      "name": "Eng. Tariq Al-Hashimi",
+      "role": "Chief Acoustic Consultant",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-03-12T10:00:00Z",
+    "readTime": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Acoustics", "STC 65", "Villa Soundproofing", "Bahrain Architecture"],
+    "summary": "Achieving genuine acoustic tranquility in luxury residences requires engineered wall assemblies, resilient isolation clips, and acoustic perimeter seals rather than standard cosmetic wall treatments.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In the Gulf region’s premier developments—from Amwaj Islands and Diyar Al Muharraq to Riffa Views—luxury architectural design frequently features expansive stone floors, soaring double-height glazing, and powerful ducted HVAC systems. While visually breathtaking, these materials create unforgiving acoustic conditions where ambient street noise, footfalls, and mechanical vibrations easily permeate private suites."
+      },
+      {
+        "type": "heading2",
+        "text": "The Physics of Sound Transmission Class (STC)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sound Transmission Class (STC) is an integer rating evaluating how effectively a building partition attenuates airborne sound. A typical concrete masonry block wall provides an STC rating between 40 and 44, meaning loud conversations in adjoining rooms remain clearly audible. For true executive tranquility and bedroom sanctuary, Skylink engineers assemblies to STC 60–68."
+      },
+      {
+        "type": "callout",
+        "title": "Engineering Benchmark: STC 65 vs. Standard STC 40",
+        "text": "At STC 40, normal speech is muffled but loud speech is distinct. At STC 65, sound energy is reduced by over 99.9%, rendering even home cinema subwoofer frequencies and high-velocity HVAC rumble inaudible."
+      },
+      {
+        "type": "heading2",
+        "text": "Key Components of a Decoupled Partition Assembly"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Resilient Decoupling Channels & Rubber Isolation Clips: Mechanically separates drywall gypsum from the underlying structural studs, breaking the physical pathway of sound vibrations.",
+          "High-Density Rockwool Acoustic Cores (80kg/m³ - 100kg/m³): Fills cavity resonance to absorb mid-to-high frequency airborne transmission.",
+          "Viscoelastic Damping Compounds: Constrained-layer damping sandwiches that convert mechanical sound waves into microscopic thermal energy.",
+          "Acoustical Perimeter Sealants: Airtight perimeter caulk at all floor, ceiling, and electrical penetrations to eliminate flank paths."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "post-2",
+    "slug": "designing-ultimate-private-home-cinema-acoustics",
+    "title": "Designing the Ultimate Private Home Cinema: Room Decoupling & RT60 Control",
+    "excerpt": "How to calibrate room dimensions, engineer custom bass traps, and tune reverberation time (RT60) to 0.25 seconds for a reference-grade Dolby Atmos experience.",
+    "category": "Home Theater",
+    "author": {
+      "name": "Sarah Mansoor",
+      "role": "Home Cinema Design Lead",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-03-05T08:30:00Z",
+    "readTime": "7 min read",
+    "coverImage": "https://images.unsplash.com/photo-1595769816263-9b910be24d5f?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Home Theater", "Dolby Atmos", "RT60", "Bass Traps", "Cinema Acoustics"],
+    "summary": "High-end audiovisual equipment delivers only 40% of its potential in an untreated room. Learn how spatial acoustic tuning transforms raw sound into visceral cinematic immersion.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Investing in reference loudspeakers and multi-subwoofer arrays is meaningless if the room itself is an echo chamber. In an untreated room, dialogue sounds muddy, bass frequencies boom unevenly across seating rows, and sound spills throughout the rest of the residence."
+      },
+      {
+        "type": "heading2",
+        "text": "The Golden Ratio and Room Resonance Modes"
+      },
+      {
+        "type": "paragraph",
+        "text": "Every enclosed room acts as an acoustic resonator with specific axial, tangential, and oblique standing wave modes. We employ 3D acoustic room modeling prior to fabrication to place resonant membrane bass traps in precise corner locations."
+      },
+      {
+        "type": "callout",
+        "title": "The RT60 Target for Private Cinemas",
+        "text": "Reverberation Time (RT60) measures how long it takes sound to decay by 60 decibels. For an elite Dolby Atmos theater, the target RT60 across 250Hz to 4000Hz is between 0.22s and 0.28s."
+      }
+    ]
+  },
+  {
+    "id": "post-3",
+    "slug": "gym-floor-acoustic-insulation-eliminating-impact-vibrations",
+    "title": "Gym Flooring Acoustics: Eliminating Impact Vibration in Mixed-Use Towers",
+    "excerpt": "Solving structure-borne noise from heavy dumbbell drops and deadlifts in high-rise towers with multi-layered decoupled elastomeric sub-flooring.",
+    "category": "Gym Flooring",
+    "author": {
+      "name": "Eng. Faisal Al-Sabah",
+      "role": "Structural Vibration Specialist",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-02-24T14:15:00Z",
+    "readTime": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Gym Acoustics", "Vibration Isolation", "Impact Sound", "Commercial Fit-Out"],
+    "summary": "Impact noise from free weights travels directly through concrete slabs as structural vibration. Only engineered isolation pads can prevent tenant complaints.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In commercial towers and luxury high-rises across Manama and Seef, fitness facilities are premier amenities. However, dropping heavy weights onto an untreated slab sends vibrations tens of floors above and below."
+      },
+      {
+        "type": "callout",
+        "title": "Natural Frequency Isolation Target",
+        "text": "Effective gym vibration isolation systems must achieve a system natural frequency under 10 Hz to absorb shock energy elastomericly."
+      }
+    ]
+  },
+  {
+    "id": "post-4",
+    "slug": "starry-sky-ceilings-luxury-fiber-optic-lighting",
+    "title": "Starry Sky Ceilings: The Art & Precision of Fiber-Optic Acoustic Panels",
+    "excerpt": "How bespoke fiber-optic starry sky ceilings combine micro-point LED lighting, shooting star animations, and sound absorption in luxury villas and theaters.",
+    "category": "Luxury Ceilings",
+    "author": {
+      "name": "Laila Ebrahim",
+      "role": "Architectural Lighting Designer",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-02-15T11:20:00Z",
+    "readTime": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Starry Sky", "Fiber Optics", "Lighting Design", "Ceiling Acoustics"],
+    "summary": "A starry sky ceiling should never be a flimsy plastic stick-on. Architectural-grade acoustical panels combine constellation realism with sound dampening.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Few architectural features evoke the wonder and luxury of a bespoke starry sky ceiling. Whether installed in a private cinema or a master bedroom suite, hand-crafted fiber optics transform ordinary spaces into cosmic sanctuaries."
+      }
+    ]
+  },
+  {
+    "id": "post-5",
+    "slug": "commercial-fit-out-acoustics-speech-privacy-boardrooms",
+    "title": "Commercial Fit-Outs: Solving Echo & Speech Privacy in Executive Boardrooms",
+    "excerpt": "Architectural wood acoustic baffles, fabric wall panels, and sound masking systems designed for confidential corporate discussions and video conference clarity.",
+    "category": "Fit-Out",
+    "author": {
+      "name": "Eng. Tariq Al-Hashimi",
+      "role": "Chief Acoustic Consultant",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-02-02T09:00:00Z",
+    "readTime": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Commercial Fit-Out", "Boardrooms", "Speech Privacy", "Acoustic Baffles"],
+    "summary": "Modern corporate offices with glass partitions often suffer from severe reverberation that hampers Zoom meetings and compromises executive confidentiality.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In the financial district of Bahrain Bay, corporate interiors favor sleek glass walls and polished marble. However, these reflective finishes create echo-prone environments that cause listener fatigue."
+      }
+    ]
+  },
+  {
+    "id": "post-6",
+    "slug": "hotel-hospitality-acoustic-insulation-stc-standards",
+    "title": "Hotel & Hospitality Soundproofing: Protecting Guest Sleep Quality & STC Compliance",
+    "excerpt": "Acoustic wall partitions, corridor drop seals, and decoupled plumbing chases engineered for 5-star hospitality properties in Bahrain.",
+    "category": "Acoustic Engineering",
+    "author": {
+      "name": "Sarah Mansoor",
+      "role": "Home Cinema Design Lead",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-01-20T10:00:00Z",
+    "readTime": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Hospitality", "Hotels", "Guest Suites", "STC Compliance"],
+    "summary": "Noise complaints are the #1 negative review trigger for luxury hotels. Engineered party walls and acoustic drop seals guarantee certified 5-star tranquility.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In luxury hotels and serviced apartments, guest acoustic privacy is paramount. Adjoining suite party walls must achieve a minimum of STC 55 to ensure conversational privacy, while corridor entry doors require perimeter acoustic drop seals to silence foot traffic."
+      }
+    ]
+  },
+  {
+    "id": "post-7",
+    "slug": "acoustic-wood-slat-panels-architectural-interiors",
+    "title": "Architectural Wood Slat Acoustic Panels: Balancing Warm Aesthetics with Sound Absorption",
+    "excerpt": "Natural oak and walnut acoustic fluted wall cladding featuring recycled PET acoustic backing for modern villas and executive offices.",
+    "category": "Fit-Out",
+    "author": {
+      "name": "Laila Ebrahim",
+      "role": "Architectural Lighting Designer",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2026-01-10T12:00:00Z",
+    "readTime": "4 min read",
+    "coverImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Wood Slats", "Acoustic Paneling", "Interior Architecture", "NRC Ratings"],
+    "summary": "Acoustic wood slat panels provide NRC 0.85 sound absorption while introducing organic warmth, texture, and linear elegance to contemporary spaces.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Architectural wood slat panels have become the gold standard in luxury interior fit-outs. By pairing real timber veneers with 9mm high-density acoustic polyester felt, reverberation is absorbed efficiently without sacrificing visual prestige."
+      }
+    ]
+  },
+  {
+    "id": "post-8",
+    "slug": "recording-studio-podcast-room-acoustic-treatment",
+    "title": "Recording Studio & Podcast Room Acoustics: Mastering Flutter Echo & Bass Nulls",
+    "excerpt": "Creating pristine broadcast-grade acoustic environments with broadband absorbers, diffusion arrays, and floating vocal isolation booths.",
+    "category": "Home Theater",
+    "author": {
+      "name": "Eng. Faisal Al-Sabah",
+      "role": "Structural Vibration Specialist",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+    },
+    "publishedAt": "2025-12-28T09:30:00Z",
+    "readTime": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Studio Acoustics", "Podcast Room", "Broadcast", "Diffusion"],
+    "summary": "Clean audio recording requires removing comb filtering and low-end room resonance. Discover professional acoustic design for media studios and content rooms.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Whether engineering a commercial voiceover studio or a private podcast room, eliminating slap-back flutter echo between parallel walls is critical. Broadband absorbers paired with quadratic diffusers provide clean frequency balance."
+      }
+    ]
+  }
+]

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import FitOutSection from "@/components/FitOutSection";
+import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function FitOutPage() {
@@ -14,6 +15,7 @@ export default function FitOutPage() {
       <main>
         <FitOutSection onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       </main>
+      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );
