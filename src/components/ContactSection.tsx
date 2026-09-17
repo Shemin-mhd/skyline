@@ -5,6 +5,7 @@ import { Phone, Mail, Globe, MapPin, ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -14,9 +15,31 @@ export default function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "contact",
+          name: form.name,
+          company: form.company,
+          email: form.email,
+          phone: form.phone,
+          service: form.projectType,
+          message: form.message,
+          source: "Contact Section Form",
+        }),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Submission error:", err);
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactItems = [

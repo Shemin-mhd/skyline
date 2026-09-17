@@ -1,0 +1,68 @@
+[
+  {
+    "id": "srv-01",
+    "num": "01",
+    "title": "Luxury Home Theater Solutions",
+    "category": "Private Cinema",
+    "description": "Turnkey acoustic engineering, sound isolation, fabric-wrapped acoustic panels, and cinema-grade calibration for bespoke private villas.",
+    "specs": "STC 65+ Soundproofing · THX & Dolby Atmos Ready",
+    "link": "/#home-theater",
+    "status": "Active",
+    "inquiriesCount": 4
+  },
+  {
+    "id": "srv-02",
+    "num": "02",
+    "title": "Hotel & Apartment Acoustic Insulation",
+    "category": "Architectural Soundproofing",
+    "description": "High-density decoupled acoustic insulation for hospitality partitions, mechanical shafts, and inter-tenancy residential demising walls.",
+    "specs": "BS EN ISO 140 Acoustic Compliance · Flame Retardant",
+    "link": "/#services",
+    "status": "Active",
+    "inquiriesCount": 3
+  },
+  {
+    "id": "srv-03",
+    "num": "03",
+    "title": "Acoustic Treatment for New Buildings",
+    "category": "Structural Engineering",
+    "description": "Comprehensive structural noise abatement, slab vibration isolation, and reverberation control engineered at construction stage.",
+    "specs": "Vibration Damping · High-Performance NRC 0.95 Baffles",
+    "link": "/#services",
+    "status": "Active",
+    "inquiriesCount": 2
+  },
+  {
+    "id": "srv-04",
+    "num": "04",
+    "title": "Residential & Commercial Fit-Out Solutions",
+    "category": "Interior Fit-Out",
+    "description": "Bespoke acoustic wood slat ceilings, timber micro-perforated wall cladding, and architectural acoustic finishing for luxury interiors.",
+    "specs": "Custom Wood Finishes · Hidden Fastening System",
+    "link": "/#services",
+    "status": "Active",
+    "inquiriesCount": 2
+  },
+  {
+    "id": "srv-05",
+    "num": "05",
+    "title": "Gym Floor Acoustic Insulation",
+    "category": "Impact Noise Isolation",
+    "description": "Heavy weight-drop shock absorption, multi-layer decoupled subfloors, and vibration damping designed for luxury fitness suites.",
+    "specs": "Delta Lw 32dB Impact Reduction · Heavy Weight Drop Rated",
+    "link": "/#services",
+    "status": "Active",
+    "inquiriesCount": 3
+  },
+  {
+    "id": "srv-06",
+    "num": "06",
+    "title": "Starry Sky Luxury Lighting",
+    "category": "Optical & Ambient Lighting",
+    "description": "Handcrafted fiber-optic starry sky ceilings with shooting star effects, twinkle dimming, and precision acoustic backer panels.",
+    "specs": "RGBW Fiber Optic · Acoustic Fabric Panel Backing",
+    "link": "/#services",
+    "status": "Active",
+    "inquiriesCount": 1
+  }
+]

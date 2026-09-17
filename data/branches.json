@@ -1,0 +1,13 @@
+[
+  {
+    "id": "branch-1",
+    "name": "Skylink Engineering HQ — Manama",
+    "type": "Primary HQ",
+    "address": "Kanoo Tower · Diplomatic Area / Seef",
+    "cityCountry": "Kingdom of Bahrain",
+    "phone": "+973 33048555",
+    "email": "office@skylinkec.com",
+    "hours": "8:00 AM – 6:00 PM (Sun – Thu)",
+    "isPrimary": true
+  }
+]

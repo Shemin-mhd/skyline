@@ -2,7 +2,8 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
-import { X, ArrowRight, ArrowLeft, CheckCircle2, ShieldCheck, Settings, Layers, Volume2, ArrowUpRight } from "lucide-react";
+import { X, ArrowRight, ArrowLeft, CheckCircle2, Sliders, ShieldCheck, Compass, Phone, ArrowUpRight } from "lucide-react";
+import { trackWhatsAppLead } from "@/lib/track";
 
 export interface ServiceDetail {
   id: string;
@@ -260,6 +261,7 @@ export default function ServiceDetailModal({
               href={`https://wa.me/97333048555?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppLead("Service Modal CTA", service.title)}
               className="px-6 py-3.5 bg-white hover:bg-gray-100 border border-gray-300 text-black font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center gap-2"
             >
               <svg className="w-4 h-4 text-[#25D366]" viewBox="0 0 24 24" fill="currentColor">

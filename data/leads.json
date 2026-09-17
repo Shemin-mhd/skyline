@@ -1,0 +1,98 @@
+[
+  {
+    "id": "lead-wa-1",
+    "type": "whatsapp",
+    "name": "Sheikh Khalid Al-Dosari",
+    "phone": "+973 3988 7766",
+    "email": "khalid@bahrain.bh",
+    "service": "Luxury Home Theater Solutions",
+    "message": "Hero - Instant VIP Villa Cinema Consultation",
+    "source": "Hero Primary CTA",
+    "triggerLocation": "Hero Primary CTA",
+    "pagePath": "/",
+    "device": "Desktop",
+    "status": "new",
+    "notes": [
+      "Clicked Hero Primary CTA at 17:42 from Desktop."
+    ],
+    "createdAt": "2026-09-16T12:12:40.677Z"
+  },
+  {
+    "id": "lead-wa-2",
+    "type": "whatsapp",
+    "name": "Tariq Mahmood",
+    "phone": "+973 3322 1144",
+    "service": "Gym Floor Acoustic Insulation",
+    "message": "Gym Flooring: Decoupled Floating Floor Quote",
+    "source": "Gym Floor Section CTA",
+    "triggerLocation": "Gym Floor Section CTA",
+    "pagePath": "/#services",
+    "device": "Mobile",
+    "status": "new",
+    "notes": [
+      "Clicked Gym Floor Section CTA from iPhone."
+    ],
+    "createdAt": "2026-09-16T08:45:00.000Z"
+  },
+  {
+    "id": "lead-wa-3",
+    "type": "whatsapp",
+    "name": "Sara Al-Khalifa",
+    "phone": "+973 3611 9900",
+    "email": "sara.k@interiors-bh.com",
+    "service": "Hotel & Apartment Acoustic Insulation",
+    "message": "Hero - Certified Inter-Tenancy Partition Consultation",
+    "source": "Hero Primary CTA",
+    "triggerLocation": "Hero Primary CTA",
+    "pagePath": "/",
+    "device": "Desktop",
+    "status": "new",
+    "notes": [],
+    "createdAt": "2026-09-15T15:20:00.000Z"
+  },
+  {
+    "id": "lead-wa-4",
+    "type": "whatsapp",
+    "name": "Rashid Bucheeri",
+    "phone": "+973 3888 2104",
+    "service": "Residential & Commercial Fit-Out Solutions",
+    "message": "Floating Widget: Turnkey Acoustic Wood Slats & Baffles",
+    "source": "Floating WhatsApp Widget",
+    "triggerLocation": "Sidebar WhatsApp Widget",
+    "pagePath": "/#services",
+    "device": "Mobile",
+    "status": "new",
+    "notes": [],
+    "createdAt": "2026-09-14T11:45:00.000Z"
+  },
+  {
+    "id": "lead-wa-5",
+    "type": "whatsapp",
+    "name": "Dr. Fatima Al-Zayani",
+    "phone": "+973 3777 4433",
+    "service": "Starry Sky Luxury Lighting",
+    "message": "Home Theater: Bespoke Starry Sky Lighting Inquiry",
+    "source": "Hero Primary CTA",
+    "triggerLocation": "Hero Primary CTA",
+    "pagePath": "/",
+    "device": "Desktop",
+    "status": "new",
+    "notes": [],
+    "createdAt": "2026-09-13T09:30:00.000Z"
+  },
+  {
+    "id": "lead-wa-6",
+    "type": "whatsapp",
+    "name": "Ahmed Al-Mansoor",
+    "phone": "+973 3948 1234",
+    "service": "Acoustic Treatment for New Buildings",
+    "message": "Hero - Structural Noise Abatement & Vibration Dampening",
+    "source": "Hero Primary CTA",
+    "triggerLocation": "Hero Primary CTA",
+    "pagePath": "/",
+    "device": "Desktop",
+    "status": "contacted",
+    "notes": [],
+    "createdAt": "2026-09-12T14:10:00.000Z"
+  }
+]
