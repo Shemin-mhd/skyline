@@ -48,8 +48,8 @@ const AdminContext = createContext<AdminContextType | null>(null);
 
 export function AdminProvider({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
-  const [emailInput, setEmailInput] = useState<string>("office@skylinkec.com");
-  const [passwordInput, setPasswordInput] = useState<string>("skylink2026");
+  const [emailInput, setEmailInput] = useState<string>("");
+  const [passwordInput, setPasswordInput] = useState<string>("");
   const [authError, setAuthError] = useState<string>("");
 
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -89,12 +89,15 @@ export function AdminProvider({ children }: { children: React.ReactNode }) {
       const saved = localStorage.getItem("skylink_admin_auth");
       if (saved === "false") {
         setIsAuthenticated(false);
+        setEmailInput("");
+        setPasswordInput("");
+        localStorage.removeItem("skylink_admin_email");
       } else {
         setIsAuthenticated(true);
-      }
-      const savedEmail = localStorage.getItem("skylink_admin_email");
-      if (savedEmail) {
-        setEmailInput(savedEmail);
+        const savedEmail = localStorage.getItem("skylink_admin_email");
+        if (savedEmail && savedEmail !== "office@skylinkec.com") {
+          setEmailInput(savedEmail);
+        }
       }
     }
   }, []);
@@ -231,7 +234,10 @@ export function AdminProvider({ children }: { children: React.ReactNode }) {
   // Logout handler
   const handleLogout = () => {
     setIsAuthenticated(false);
+    setEmailInput("");
+    setPasswordInput("");
     localStorage.setItem("skylink_admin_auth", "false");
+    localStorage.removeItem("skylink_admin_email");
   };
 
   return (

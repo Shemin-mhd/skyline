@@ -61,7 +61,7 @@
     },
     "publishedAt": "2026-03-05T08:30:00Z",
     "readTime": "7 min read",
-    "coverImage": "https://images.unsplash.com/photo-1595769816263-9b910be24d5f?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "/images/hero-theater.jpg",
     "tags": ["Home Theater", "Dolby Atmos", "RT60", "Bass Traps", "Cinema Acoustics"],
     "summary": "High-end audiovisual equipment delivers only 40% of its potential in an untreated room. Learn how spatial acoustic tuning transforms raw sound into visceral cinematic immersion.",
     "content": [
@@ -97,7 +97,7 @@
     },
     "publishedAt": "2026-02-24T14:15:00Z",
     "readTime": "5 min read",
-    "coverImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "/images/gym-acoustics.jpg",
     "tags": ["Gym Acoustics", "Vibration Isolation", "Impact Sound", "Commercial Fit-Out"],
     "summary": "Impact noise from free weights travels directly through concrete slabs as structural vibration. Only engineered isolation pads can prevent tenant complaints.",
     "content": [
@@ -109,29 +109,6 @@
         "type": "callout",
         "title": "Natural Frequency Isolation Target",
         "text": "Effective gym vibration isolation systems must achieve a system natural frequency under 10 Hz to absorb shock energy elastomericly."
-      }
-    ]
-  },
-  {
-    "id": "post-4",
-    "slug": "starry-sky-ceilings-luxury-fiber-optic-lighting",
-    "title": "Starry Sky Ceilings: The Art & Precision of Fiber-Optic Acoustic Panels",
-    "excerpt": "How bespoke fiber-optic starry sky ceilings combine micro-point LED lighting, shooting star animations, and sound absorption in luxury villas and theaters.",
-    "category": "Luxury Ceilings",
-    "author": {
-      "name": "Laila Ebrahim",
-      "role": "Architectural Lighting Designer",
-      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
-    },
-    "publishedAt": "2026-02-15T11:20:00Z",
-    "readTime": "5 min read",
-    "coverImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["Starry Sky", "Fiber Optics", "Lighting Design", "Ceiling Acoustics"],
-    "summary": "A starry sky ceiling should never be a flimsy plastic stick-on. Architectural-grade acoustical panels combine constellation realism with sound dampening.",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Few architectural features evoke the wonder and luxury of a bespoke starry sky ceiling. Whether installed in a private cinema or a master bedroom suite, hand-crafted fiber optics transform ordinary spaces into cosmic sanctuaries."
       }
     ]
   },
@@ -201,29 +178,6 @@
       {
         "type": "paragraph",
         "text": "Architectural wood slat panels have become the gold standard in luxury interior fit-outs. By pairing real timber veneers with 9mm high-density acoustic polyester felt, reverberation is absorbed efficiently without sacrificing visual prestige."
-      }
-    ]
-  },
-  {
-    "id": "post-8",
-    "slug": "recording-studio-podcast-room-acoustic-treatment",
-    "title": "Recording Studio & Podcast Room Acoustics: Mastering Flutter Echo & Bass Nulls",
-    "excerpt": "Creating pristine broadcast-grade acoustic environments with broadband absorbers, diffusion arrays, and floating vocal isolation booths.",
-    "category": "Home Theater",
-    "author": {
-      "name": "Eng. Faisal Al-Sabah",
-      "role": "Structural Vibration Specialist",
-      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
-    },
-    "publishedAt": "2025-12-28T09:30:00Z",
-    "readTime": "6 min read",
-    "coverImage": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["Studio Acoustics", "Podcast Room", "Broadcast", "Diffusion"],
-    "summary": "Clean audio recording requires removing comb filtering and low-end room resonance. Discover professional acoustic design for media studios and content rooms.",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Whether engineering a commercial voiceover studio or a private podcast room, eliminating slap-back flutter echo between parallel walls is critical. Broadband absorbers paired with quadratic diffusers provide clean frequency balance."
       }
     ]
   }

@@ -1,12 +1,20 @@
 "use client";
 
 import React from "react";
+import { usePathname } from "next/navigation";
 import WhatsAppChatIcon from "@/components/WhatsAppChatIcon";
 import { trackWhatsAppLead } from "@/lib/track";
 import { useWhatsAppNumber } from "@/lib/use-whatsapp-number";
 
 export default function FloatingWhatsApp() {
+  const pathname = usePathname();
   const { getWhatsAppUrl } = useWhatsAppNumber();
+
+  // Hide WhatsApp floating button on admin portal and login pages
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
+
   const whatsappUrl = getWhatsAppUrl("Hello Skylink Acoustics, I would like to request acoustic assistance.");
 
   return (

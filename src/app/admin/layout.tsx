@@ -57,30 +57,31 @@ function AdminShell({ children }: { children: React.ReactNode }) {
           </div>
 
           <form onSubmit={handleLogin} className="space-y-4">
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               <label className="text-xs font-semibold text-slate-300">
-                Admin Email
+                Email
               </label>
               <input
                 type="email"
-                placeholder="office@skylinkec.com"
+                placeholder="Enter your email"
                 value={emailInput}
                 onChange={(e) => setEmailInput(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-900/80 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-white text-xs font-sans"
+                required
+                className="w-full px-3.5 py-2.5 bg-slate-900/80 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-white text-xs font-sans transition-colors"
               />
             </div>
 
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               <label className="text-xs font-semibold text-slate-300">
                 Password
               </label>
               <input
                 type="password"
-                placeholder="Enter password (skylink2026)"
+                placeholder="Enter your password"
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
-                autoFocus
-                className="w-full px-3.5 py-2.5 bg-slate-900/80 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-white text-xs font-sans"
+                required
+                className="w-full px-3.5 py-2.5 bg-slate-900/80 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-white text-xs font-sans transition-colors"
               />
             </div>
 
@@ -95,21 +96,9 @@ function AdminShell({ children }: { children: React.ReactNode }) {
               type="submit"
               className="w-full py-2.5 bg-white hover:bg-slate-200 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-lg transition-all shadow-md cursor-pointer"
             >
-              Sign In to Portal
+              Sign In
             </button>
           </form>
-
-          <div className="p-3 bg-slate-900/60 border border-slate-800 rounded-lg space-y-1 text-xs">
-            <div className="text-slate-400 text-[11px] font-semibold">Demo Credentials:</div>
-            <div className="flex justify-between text-slate-300">
-              <span>Email:</span>
-              <code className="text-white font-mono text-[11px]">office@skylinkec.com</code>
-            </div>
-            <div className="flex justify-between text-slate-300">
-              <span>Password:</span>
-              <code className="text-white font-mono text-[11px]">skylink2026</code>
-            </div>
-          </div>
         </div>
       </div>
     );

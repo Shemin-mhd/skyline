@@ -47,13 +47,6 @@ export default function AcousticInsulationSection({ onOpenQuoteModal }: Props) {
     },
   ];
 
-  const technicalSpecs = [
-    { label: "Sound Transmission Class", value: "STC 65 - 72", benchmark: "Standard Drywall is only STC 35" },
-    { label: "Noise Reduction Coefficient", value: "NRC 0.95+", benchmark: "High-absorption mineral core" },
-    { label: "Impact Sound Insulation", value: "ΔLw 28 - 34 dB", benchmark: "Eliminates heavy footfall thumps" },
-    { label: "Fire Safety Rating", value: "Class A / Non-Combustible", benchmark: "Compliant with international building codes" },
-  ];
-
   const workflow = [
     { num: "01", step: "CONSULTATION", desc: "Acoustic site inspection, baseline decibel measurement & partition zoning." },
     { num: "02", step: "DESIGN", desc: "Acoustic CAD drawings, resilient clip detailing & STC specification." },
@@ -263,42 +256,7 @@ export default function AcousticInsulationSection({ onOpenQuoteModal }: Props) {
         </div>
       </section>
 
-      {/* 3. Technical Specifications & Acoustic Comparison */}
-      <section className="w-full bg-[#FAF9F6] py-16 sm:py-20 border-b border-gray-200/80">
-        <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-10">
-          
-          <div className="max-w-2xl space-y-2">
-            <span className="text-[11px] font-sans font-bold tracking-[0.24em] text-gray-500 uppercase block">
-              PERFORMANCE BENCHMARKS
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-normal text-black tracking-tight">
-              Laboratory-Tested Performance
-            </h2>
-            <p className="text-gray-600 font-sans text-xs sm:text-sm leading-relaxed">
-              We specify and install tested acoustic assemblies with verified Sound Transmission Class (STC) ratings.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {technicalSpecs.map((spec, idx) => (
-              <div key={idx} className="p-6 bg-white border border-gray-200 shadow-2xs space-y-2">
-                <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-gray-400 block">
-                  {spec.label}
-                </span>
-                <div className="font-serif text-2xl sm:text-3xl font-bold text-black">
-                  {spec.value}
-                </div>
-                <div className="text-xs font-sans text-gray-500 pt-2 border-t border-gray-100">
-                  {spec.benchmark}
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 4. Four-Step Solution Delivery (PDF Page 10) */}
+      {/* 3. Four-Step Solution Delivery (PDF Page 10) */}
       <section className="w-full bg-white py-16 sm:py-20 border-b border-gray-200/80">
         <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-12">
           
@@ -328,25 +286,6 @@ export default function AcousticInsulationSection({ onOpenQuoteModal }: Props) {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* CTA Banner at bottom - Curved with Rounded Button */}
-          <div className="p-8 sm:p-10 bg-[#111] text-white flex flex-col md:flex-row items-center justify-between gap-6 rounded-2xl sm:rounded-3xl shadow-xl">
-            <div className="space-y-1 text-center md:text-left">
-              <h3 className="font-serif text-2xl sm:text-3xl font-normal tracking-tight">
-                Ready to engineer silence into your project?
-              </h3>
-              <p className="text-gray-400 font-sans text-xs sm:text-sm">
-                Speak with our lead acoustic engineers today for spatial review and budgeting.
-              </p>
-            </div>
-
-            <button
-              onClick={onOpenQuoteModal}
-              className="px-8 py-3.5 bg-white hover:bg-gray-100 text-black font-sans text-xs font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95 cursor-pointer shrink-0 rounded-full"
-            >
-              Request Engineering Quote
-            </button>
           </div>
 
         </div>
